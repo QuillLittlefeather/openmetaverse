@@ -1,5 +1,5 @@
 #summary Remove the specified asset from the asset service.
-#labels Protocol-Grid
+#labels Protocol-Asset
 
 = Request Format =
 
