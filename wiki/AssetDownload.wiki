@@ -28,7 +28,7 @@ X-ASSET-FLAGS: 1
 Transfer-Encoding: chunked
 Content-Type: image/tga
 
-[raw asset data]
+(raw asset data)
 </pre>
 
 = Supported Response Codes =
