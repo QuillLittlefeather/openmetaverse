@@ -10,10 +10,10 @@ GET /assets/e1d3e830-36cd-4232-aa8c-01325320e533 HTTP/1.1
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||Content-SHA1||The SHA hash of the asset||a 40-character hexadecimal number.||
+||Content-SHA1||The SHA-1 hash of the asset||40-character hexadecimal string||
 ||Last-Modified||RFC870 timestamp||RFC870 String||
-||X-ASSET-CREATOR-ID||The ID of the assets creator||UUID||
-||X-ASSET-FLAGS||Bit Flags for the asset||[[AssetFlags]]||
+||X-ASSET-CREATOR-ID||UUID of the asset's creator||UUID||
+||X-ASSET-FLAGS||Bit flags for the asset||AssetFlags||
 ||Content-Type||The content-type of the asset||MimeType||
 
 <pre>
