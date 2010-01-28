@@ -4,13 +4,9 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||ID||UUID of user this inventory will belong to||UUID||Yes||
+||`ID`||UUID of the user this inventory will belong to||UUID||Yes||
 
 {{{
-POST /services/ HTTP/1.1
-Content-Length: 78
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=AddInventorySkeleton
 &ID=e4709e21-9a3f-4276-b3cc-22224bdf0199
 }}}
@@ -18,17 +14,26 @@ RequestMethod=AddInventorySkeleton
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||FolderID||UUID of the root folder||UUID||
+||`Success`||True if a FolderID was returned, False if a Message was returned||Boolean||
+||`FolderID`||UUID of the root folder||UUID||
+||`Message`||Error message||String||
+
+Success:
 
 {{{
-HTTP/1.1 200 OK
-Date: Thu, 10 Dec 2009 23:20:55 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 51
-Content-Type: application/json
+{
+    "Success":"true",
+    "FolderID":"cf836ad7-d7c2-45bd-97cc-48a6225d8263"
+}
+}}}
 
-{ "FolderID":"cf836ad7-d7c2-45bd-97cc-48a6225d8263" }
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"User account not found"
+}
 }}}
 
 = Supported Response Codes =
