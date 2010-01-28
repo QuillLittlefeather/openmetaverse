@@ -41,9 +41,7 @@ Content-Type: application/json
 = Supported Response Codes =
 
   * 200
-    * An existing capability was updated with a new expiration
-  * 201
-    * A new capability was created
+    * A new capability was created, or an existing capability was updated with a new expiration
   * 500
     * Internal server error occurred
 
