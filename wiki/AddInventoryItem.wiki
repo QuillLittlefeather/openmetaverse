@@ -46,12 +46,3 @@ Failure:
     "Message":"Invalid AssetID"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * A new item was successfully created
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
