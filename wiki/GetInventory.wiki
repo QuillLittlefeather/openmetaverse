@@ -26,7 +26,7 @@ RequestMethod=GetInventory
 
 Returns an array containing either items, folders, or both depending on the parameters used in the request. Each returned record can be either an item or a folder. If a folder and its children were requested, the first record will be the requested folder.
 
-Inventory Folder Format:
+== Inventory Folder Format ==
 
 || *Parameter* || *Description* || *Type* ||
 ||`Type`||Inventory node type, will always be "Folder"||String||
@@ -40,7 +40,7 @@ Inventory Folder Format:
 ||`ChildCount`||Total number of children in this folder||Integer||
 ||`Version`||Version number of the folder, incremented each time children are added or removed||Integer||
 
-Inventory Item Format:
+== Inventory Item Format ==
 
 || *Parameter* || *Description* || *Type* ||
 ||`Type`||Inventory node type, will always be "Item"||String||
