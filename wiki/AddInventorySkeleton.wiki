@@ -33,8 +33,10 @@ Content-Type: application/json
 
 = Supported Response Codes =
 
-  * 201
+  * 200
     * The new library was created
+  * 409
+    * A library already exists for the user
   * 500
     * Internal server error occurred
 
