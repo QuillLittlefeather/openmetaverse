@@ -3,9 +3,9 @@
 
 = Request Format =
 
-<pre>
+{{{
 GET /assets/e1d3e830-36cd-4232-aa8c-01325320e533 HTTP/1.1
-</pre>
+}}}
 
 = Response Format =
 
@@ -16,7 +16,7 @@ GET /assets/e1d3e830-36cd-4232-aa8c-01325320e533 HTTP/1.1
 ||X-ASSET-FLAGS||Bit flags for the asset||AssetFlags||
 ||Content-Type||The content type of the asset||ContentType||
 
-<pre>
+{{{
 HTTP/1.1 200 OK
 Date: Wed, 09 Dec 2009 07:48:17 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
@@ -29,7 +29,7 @@ Transfer-Encoding: chunked
 Content-Type: image/tga
 
 (raw asset data)
-</pre>
+}}}
 
 = Supported Response Codes =
 
