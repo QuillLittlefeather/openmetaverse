@@ -1,0 +1,47 @@
+#summary Retrieve the root inventory folder UUID for the specified owner.
+#labels Protocol-Inventory
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||GetInventoryRoot||String||Yes||
+||OwnerID||UUID of the inventory owner||UUID||Yes||
+
+{{{
+POST /services/ HTTP/1.1
+User-Agent: Simian Login Client
+Content-Length: 72
+Content-Type: application/x-www-form-urlencoded
+
+RequestMethod=GetRootFolder
+&OwnerID=2960f0cd-2bd3-4559-89ea-d86cc3696c7a
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||FolderID||UUID of the root folder||UUID||
+
+{{{
+HTTP/1.1 200 OK
+Date: Tue, 08 Dec 2009 23:28:43 GMT
+Server: Apache/2.2.10 (Linux/SUSE)
+X-Powered-By: Simian Grid Services
+Content-Length: 51
+Content-Type: application/json
+
+{
+  "FolderID":"3dc86b9d-da9d-4f7e-8ddb-5d5b06279b2e"
+}
+}}}
+
+= Supported Response Codes =
+
+  * 200
+    * Request was successful
+  * 404
+    * Inventory does not exist
+  * 500
+    * Internal server error occurred
+
+= Code Examples =
