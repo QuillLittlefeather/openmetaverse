@@ -15,9 +15,6 @@ RequestMethod=AddInventorySkeleton
 &ID=e4709e21-9a3f-4276-b3cc-22224bdf0199
 }}}
 
-  * If X-Asset-Id is specified and the asset ID already exists, the old asset will be replaced
-  * Only one asset upload is allowed per request
-
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
