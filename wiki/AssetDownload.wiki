@@ -9,11 +9,10 @@ GET /assets/e1d3e830-36cd-4232-aa8c-01325320e533 HTTP/1.1
 
 = Response Format =
 
-|| *Parameter* || *Description* || *Type* ||
+|| *Header* || *Description* || *Type* ||
 ||Content-SHA1||The SHA-1 hash of the asset||40-character hexadecimal string||
-||Last-Modified||RFC870 timestamp||RFC870 String||
-||X-ASSET-CREATOR-ID||UUID of the asset's creator||UUID||
-||X-ASSET-FLAGS||Bit flags for the asset||AssetFlags||
+||Last-Modified||RFC870 timestamp||RFC870 Timestamp||
+||X-Asset-Creator-ID||UUID of the asset's creator||UUID||
 ||Content-Type||The content type of the asset||ContentType||
 
 {{{
@@ -23,8 +22,7 @@ Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
 Content-SHA1: cc36b88d9d2dcd1f4a00bc76546a767e367cfd39
 Last-Modified: Wednesday, 09-Dec-09 07:48:17 GMT
-X-ASSET-CREATOR-ID: b9f9048e-2af0-4dba-ae24-9e23d5511ace
-X-ASSET-FLAGS: 1
+X-Asset-Creator-ID: b9f9048e-2af0-4dba-ae24-9e23d5511ace
 Transfer-Encoding: chunked
 Content-Type: image/tga
 
@@ -39,14 +37,3 @@ Content-Type: image/tga
     * Asset was not found
   * 500
     * Internal server error occurred
-
-= Code Examples =
-
-PHP:
-
-{{{
-$assetID = 'e1d3e830-36cd-4232-aa8c-01325320e533';
-$r = new HttpRequest('http://services.example.com/assets/' . $assetID, HttpRequest::METH_GET);
-$r->send();
-$assetData = $r->getResponseBody();
-}}}
