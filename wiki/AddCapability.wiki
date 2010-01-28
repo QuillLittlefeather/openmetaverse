@@ -5,25 +5,23 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddCapability||String||Yes||
-||OwnerID||UUID of the owner of this capability||UUID||Yes||
-||Resource||URL of the protected resource this capability maps to||Uri||Yes||
-||Expiration||UTC timestamp when this capability will expire||UTC Timestamp||Yes||
+||`OwnerID`||UUID of the owner of this capability||UUID||Yes||
+||`Resource`||URL of the protected resource this capability maps to||Uri||Yes||
+||`Expiration`||UTC timestamp when this capability will expire||UTC Timestamp||Yes||
 
 {{{
-POST /services/ HTTP/1.1
-Content-Length: 137
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=AddCapability
 &OwnerID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
-&Resource=http%3A%2F%2Fexample.com%2Fcap%2F
+&Resource=http%3A%2F%2Fexample.com%2Fprotected_resource%2F
 &Expiration=1264451975
 }}}
 
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||ID||UUID of the newly created capability||UUID||
+||`Success`||True if a CapabilityID was returned, False if a Message was returned||Boolean||
+||`CapabilityID`||UUID of the newly created capability||UUID||
+||`Message`||Error message||String||
 
 {{{
 HTTP/1.1 200 OK
@@ -33,10 +31,20 @@ X-Powered-By: Simian Grid Services
 Content-Length: 45
 Content-Type: application/json
 
+Success:
+
 {
-  "ID":"c006082b-80eb-4d17-90ff-224412c574ea"
+    "Success":"true",
+    "ID":"c006082b-80eb-4d17-90ff-224412c574ea"
 }
 }}}
+
+Failure:
+
+{
+    "Success":"false",
+    "Message:"Expiration date is in the past"
+}
 
 = Supported Response Codes =
 
