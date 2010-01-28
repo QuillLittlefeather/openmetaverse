@@ -23,16 +23,9 @@ RequestMethod=AddCapability
 ||`CapabilityID`||UUID of the newly created capability||UUID||
 ||`Message`||Error message||String||
 
-{{{
-HTTP/1.1 200 OK
-Date: Mon, 25 Jan 2010 20:43:35 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 45
-Content-Type: application/json
-
 Success:
 
+{{{
 {
     "Success":"true",
     "ID":"c006082b-80eb-4d17-90ff-224412c574ea"
@@ -41,10 +34,12 @@ Success:
 
 Failure:
 
+{{{
 {
     "Success":"false",
     "Message:"Expiration date is in the past"
 }
+}}}
 
 = Supported Response Codes =
 
