@@ -4,17 +4,13 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||RequestMethod||GetInventory||String||Yes||
-||ItemID||UUID of the item or folder||UUID||Yes||
-||OwnerID||UUID of the item or folder owner||UUID||Yes||
+||`RequestMethod`||GetInventory||String||Yes||
+||`ItemID`||UUID of the item or folder||UUID||Yes||
+||`OwnerID`||UUID of the item or folder owner||UUID||Yes||
 ||`IncludeFolders`||If true and ItemID is a folder, include child items||Boolean||Optional, defaults to TRUE||
 ||`IncludeItems`||If true and ItemID is a folder, include child folders||Boolean||Optional, defaults to TRUE||
 
 {{{
-POST /services/ HTTP/1.1
-Content-Length: 144
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=GetInventory
 &OwnerID=9ffd5a95-b8bd-4d91-bbed-ded4c80ba151
 &ItemID=cbee00bb-1f26-414a-a0aa-9c5a7156fe64
@@ -23,80 +19,80 @@ RequestMethod=GetInventory
 
 = Response Format =
 
-Returns an array containing either items, folders, or both depending on the parameters used in the request. Each returned record can be either an item or a folder.
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if an array of items and folders was returned, False if a Message was returned||Boolean||
+||`Items`||The retrieved items and folders. If a folder and its children were requested, the first record will be the requested folder||Array, see below||
+||`Message`||Error message||String||
+
+Returns an array containing either items, folders, or both depending on the parameters used in the request. Each returned record can be either an item or a folder. If a folder and its children were requested, the first record will be the requested folder.
 
 Inventory Folder Format:
 
 || *Parameter* || *Description* || *Type* ||
-||Version||Version number of the folder, incremented each time children are added or removed||Integer||
-||`ChildCount`||Total number of children in this folder||Integer||
-||ID||UUID of the folder||UUID||
-||ParentID||UUID of the parent folder, or UUID.Zero if this is the root inventory folder||UUID||
-||OwnerID||UUID of the folder owner||UUID||
-||Name||Folder name||String||
+||`Type`||Inventory node type, will always be "Folder"||String||
+||`ID`||UUID of the folder||UUID||
+||`ParentID`||UUID of the parent folder, or UUID.Zero if this is the root inventory folder||UUID||
+||`OwnerID`||UUID of the folder owner||UUID||
+||`Name`||Folder name||String||
+||`CreationDate`||UTC timestamp this folder was created||Integer||
 ||`ContentType`||Preferred content type for the folder. Default is application/octet-stream||ContentType||
 ||`ExtraData`||Free-form JSON data associated with this folder||JSON||
-||`CreationDate`||UTC timestamp this folder was created||Integer||
-||Type||Inventory node type, will always be "Folder"||String||
+||`ChildCount`||Total number of children in this folder||Integer||
+||`Version`||Version number of the folder, incremented each time children are added or removed||Integer||
 
 Inventory Item Format:
 
 || *Parameter* || *Description* || *Type* ||
-||ID||UUID of the item||UUID||
-||ParentID||UUID of the parent folder||UUID||
-||OwnerID||UUID of the item owner||UUID||
-||AssetID||UUID of the asset this item points to||UUID||
-||Name||Item name||String||
-||Description||Item description||String||
-||`ContentType`||Content type of this item||ContentType||
-||`ExtraData`||Free-form JSON data associated with this item||JSON||
+||`Type`||Inventory node type, will always be "Item"||String||
+||`ID`||UUID of the item||UUID||
+||`ParentID`||UUID of the parent folder||UUID||
+||`OwnerID`||UUID of the item owner||UUID||
+||`Name`||Item name||String||
 ||`CreationDate`||UTC timestamp this item was created||Integer||
-||Type||Inventory node type, will always be "Item"||String||
+||`ContentType`||Content type of the asset this item points to||ContentType||
+||`ExtraData`||Free-form JSON data associated with this item||JSON||
+||`AssetID`||UUID of the asset this item points to||UUID||
+||`Description`||Item description||String||
+
+Success:
 
 {{{
-HTTP/1.1 200 OK
-Date: Thu, 17 Dec 2009 09:36:54 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 3817
-Content-Type: application/json
-
-[
-  {
-    "Version":12,
-    "ChildCount":12,
-    "ID":"cbee00bb-1f26-414a-a0aa-9c5a7156fe64",
-    "ParentID":"00000000-0000-0000-0000-000000000000",
-    "OwnerID":"9ffd5a95-b8bd-4d91-bbed-ded4c80ba151",
-    "Name":"Library",
-    "ContentType":"application/vnd.ll.rootfolder",
-    "ExtraData":"",
-    "CreationDate":1261042614,
-    "Type":"Folder"
-  },{
-    "Version":0,
-    "ChildCount":0,
-    "ID":"a2bd28c4-9243-418f-887d-4aa219b0046e",
-    "ParentID":"cbee00bb-1f26-414a-a0aa-9c5a7156fe64",
-    "OwnerID":"9ffd5a95-b8bd-4d91-bbed-ded4c80ba151",
-    "Name":"Animations",
-    "ContentType":"application/x-metaverse-animation",
-    "ExtraData":"",
-    "CreationDate":1261042614,
-    "Type":"Folder"
-  },{
-    ...
-  }
-]
+{
+    "Success":"true",
+    "Items":
+    [
+        {
+            "Version":12,
+            "ChildCount":12,
+            "ID":"cbee00bb-1f26-414a-a0aa-9c5a7156fe64",
+            "ParentID":"00000000-0000-0000-0000-000000000000",
+            "OwnerID":"9ffd5a95-b8bd-4d91-bbed-ded4c80ba151",
+            "Name":"Library",
+            "ContentType":"application/vnd.ll.folder",
+            "ExtraData":"",
+            "CreationDate":1261042614,
+            "Type":"Folder"
+        },{
+            "Version":0,
+            "ChildCount":0,
+            "ID":"a2bd28c4-9243-418f-887d-4aa219b0046e",
+            "ParentID":"cbee00bb-1f26-414a-a0aa-9c5a7156fe64",
+            "OwnerID":"9ffd5a95-b8bd-4d91-bbed-ded4c80ba151",
+            "Name":"Animations",
+            "ContentType":"application/vnd.ll.animation",
+            "ExtraData":"",
+            "CreationDate":1261042614,
+            "Type":"Folder"
+        }
+    ]
+}
 }}}
 
-= Supported Response Codes =
+Failure:
 
-  * 200
-    * The inventory fetch was successful
-  * 404
-    * Inventory item or folder was not found
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
+{{{
+{
+    "Success":"false",
+    "Message":"Item or folder not found"
+}
+}}}
