@@ -18,10 +18,7 @@ Accept: */*
 Content-Length: 147
 Content-Type: application/x-www-form-urlencoded
 
-RequestMethod=AddInventoryFolder
-&ParentID=40f36b6d-d239-4ade-b354-f0f5cb9ce8f8
-&OwnerID=8e21c2df-32b2-472c-b09b-88b909ba4c86
-&Name=Default+Appearance
+`RequestMethod`=`AddInventoryFolder`&ParentID=40f36b6d-d239-4ade-b354-f0f5cb9ce8f8&OwnerID=8e21c2df-32b2-472c-b09b-88b909ba4c86&Name=Default+Appearance
 </pre>
 
 = Response Format =
@@ -37,9 +34,7 @@ X-Powered-By: Simian Grid Services
 Content-Length: 51
 Content-Type: application/json
 
-{
-  "FolderID":"2cf49939-b9f0-45af-ad21-b3441de85f52"
-}
+{ "FolderID":"2cf49939-b9f0-45af-ad21-b3441de85f52" }
 </pre>
 
 = Supported Response Codes =
