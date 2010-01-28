@@ -3,33 +3,33 @@
 
 = Request Format =
 
-<pre>
+{{{
 DELETE /assets/9b99f145-37d6-4f7b-b898-13f0035fb437 HTTP/1.1
-</pre>
+}}}
 
 = Response Format =
 
 Asset successfully removed:
 
-<pre>
+{{{
 HTTP/1.1 200 OK
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
 Content-Length: 0
 Content-Type: text/html
-</pre>
+}}}
 
 Asset not found:
 
-<pre>
+{{{
 HTTP/1.1 404 Not Found
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
 Content-Length: 0
 Content-Type: text/html
-</pre>
+}}}
 
 = Supported Response Codes =
 
