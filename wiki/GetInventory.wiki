@@ -7,8 +7,8 @@
 ||RequestMethod||GetInventory||String||Yes||
 ||ItemID||UUID of the item or folder||UUID||Yes||
 ||OwnerID||UUID of the item or folder owner||UUID||Yes||
-||IncludeFolders||If true and ItemID is a folder, include child items||Boolean||Optional, defaults to TRUE||
-||IncludeItems||If true and ItemID is a folder, include child folders||Boolean||Optional, defaults to TRUE||
+||`IncludeFolders`||If true and ItemID is a folder, include child items||Boolean||Optional, defaults to TRUE||
+||`IncludeItems`||If true and ItemID is a folder, include child folders||Boolean||Optional, defaults to TRUE||
 
 {{{
 POST /services/ HTTP/1.1
