@@ -37,9 +37,7 @@ Content-Length: 0
 = Supported Response Codes =
 
   * 200
-    * An existing identity was updated with a new credential
-  * 201
-    * A new identity was successfully created
+    * A new identity was successfully created, or an existing identity was updated with a new credential
   * 404
     * User account not found
   * 500
