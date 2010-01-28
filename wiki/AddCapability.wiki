@@ -40,12 +40,3 @@ Failure:
     "Message:"Expiration date is in the past"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * A new capability was created, or an existing capability was updated with a new expiration
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
