@@ -44,12 +44,3 @@ Failure:
     "Message":"Invalid OwnerID"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * A success or failure response was returned
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
