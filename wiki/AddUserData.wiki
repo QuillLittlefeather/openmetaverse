@@ -5,7 +5,7 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddUserData||String||Yes||
-||`ID`||UUID of the user to create or update information for||UUID||Yes||
+||`UserID`||UUID of the user to create or update information for||UUID||Yes||
 || *`Variable Fields`* ||Free form key value pairs^1^|| `*`^2^ ||Yes||
 
   * ^1^User accounts are defined as a collection of arbitrary key/value pairs, with one exception. All user accounts must have a non-empty value stored for Name, which is the key used to determine if an account exists or not. More common examples of key/value pairs are given below.
