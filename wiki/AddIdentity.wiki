@@ -40,12 +40,3 @@ Success:
     "Message:"User account not found"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * A new identity was successfully created, or an existing identity was updated with a new credential
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
