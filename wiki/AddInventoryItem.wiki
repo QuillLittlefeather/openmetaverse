@@ -27,7 +27,7 @@ TODO
 
 = Supported Response Codes =
 
-  * 201
+  * 200
     * A new item was successfully created
   * 500
     * Internal server error occurred
