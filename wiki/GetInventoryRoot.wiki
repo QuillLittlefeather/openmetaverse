@@ -36,12 +36,3 @@ Failure:
     "Message":"Inventory not found"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * Request was successful
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
