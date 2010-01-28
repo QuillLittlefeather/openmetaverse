@@ -1,0 +1,46 @@
+#summary Retrieve the root folder UUID and owner UUID for the shared inventory library.
+#labels Protocol-Inventory
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||GetLibraryRoot||String||Yes||
+
+{{{
+POST /services/ HTTP/1.1
+Content-Length: 28
+Content-Type: application/x-www-form-urlencoded
+
+RequestMethod=GetLibraryRoot
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||FolderID||UUID of the library root folder||UUID||
+||OwnerID||UUID of the library owner||UUID||
+
+{{{
+HTTP/1.1 200 OK
+Date: Fri, 18 Dec 2009 18:39:25 GMT
+Server: Apache/2.2.10 (Linux/SUSE)
+X-Powered-By: Simian Grid Services
+Content-Length: 100
+Content-Type: application/json
+
+{
+  "FolderID":"99ffc001-40b6-47ee-92c1-d5be0bd71ea6",
+  "OwnerID":"d52bbd77-8df6-4c4c-855f-d3fd1dda3600"
+}
+}}}
+
+= Supported Response Codes =
+
+  * 200
+    * Request was successful
+  * 404
+    * Shared library does not exist
+  * 500
+    * Internal server error occurred
+
+= Code Examples =
