@@ -11,7 +11,7 @@
 ||Name||Folder name||String||Yes||
 ||ContentType||Preferred content type for this folder. Defaults to application/octet-stream||ContentType||Optional||
 
-  * Specifying ID is only required for updating an existing folder
+  * ID is only required for updating an existing folder
 
 {{{
 POST /services/ HTTP/1.1
