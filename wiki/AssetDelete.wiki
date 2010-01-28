@@ -12,12 +12,10 @@ DELETE /assets/9b99f145-37d6-4f7b-b898-13f0035fb437 HTTP/1.1
 Asset successfully removed:
 
 {{{
-HTTP/1.1 200 OK
+HTTP/1.1 204 No Content
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
-Content-Length: 0
-Content-Type: text/html
 }}}
 
 Asset not found:
@@ -27,31 +25,13 @@ HTTP/1.1 404 Not Found
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
-Content-Length: 0
-Content-Type: text/html
 }}}
 
 = Supported Response Codes =
 
-  * 200
+  * 204
     * Asset was removed from the asset service
   * 404
     * Asset was not found
   * 500
     * Internal server error occurred
-
-= Code Examples =
-
-PHP:
-
-{{{
-$assetID = '9b99f145-37d6-4f7b-b898-13f0035fb437';
-$r = new HttpRequest('http://services.example.com/' . $assetID, HttpRequest::METH_DELETE, array("timeout"=>5, "useragent"=>"Example Services Client"));
-$r->send();
-// Get raw response Message:
-// $r->getRawResponseMessage()
-// Get response body only:
-// $r->getResponseBody();
-// Get http response code:
-// $r->getResponseCode();
-}}}
