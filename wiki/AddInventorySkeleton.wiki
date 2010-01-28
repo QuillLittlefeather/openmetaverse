@@ -35,12 +35,3 @@ Failure:
     "Message":"User account not found"
 }
 }}}
-
-= Supported Response Codes =
-
-  * 200
-    * The new library was created, or a library already exists for this user
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
