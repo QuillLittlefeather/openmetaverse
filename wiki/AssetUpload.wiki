@@ -1,60 +1,58 @@
-#summary Upload an asset to the asset service.
+#summary Upload a new asset or replace an existing asset.
 #labels Protocol-Asset
 
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||X-Asset-Id||UUID of the asset||UUID||Optional||
-||X-Asset-Creator-Id||UUID of the Creator||UUID||Yes||
+||`AssetID`||UUID of the asset||UUID||Optional||
+||`CreatorID`||UUID of the asset creator||UUID||Yes||
+||`Asset`||Raw asset data||Binary||Yes||
 
 {{{
 POST /assets/ HTTP/1.1
-X-Asset-Creator-Id: 5a514c21-1278-4f85-b28c-3cda253c98e4
-X-Asset-Id: 00000000-0000-0000-0000-000000000000
 Content-Length: 42574
-Content-Type: multipart/form-data; boundary=----------------------------3bace003519d
+Content-Type: multipart/form-data; boundary=--AaB03x
 
-------------------------------3bace003519d
+--AaB03x
+Content-Disposition: form-data; name="AssetID"
+
+f02ed1f6-c1fd-4781-b38a-f337e880f822
+--AaB03x
+Content-Disposition: form-data; name="CreatorID"
+
+5a514c21-1278-4f85-b28c-3cda253c98e4
+--AaB03x
+Content-Disposition: form-data; name="Asset"; filename="portrait.tga"
 Content-Type: image/tga
 
-(raw asset data)
-------------------------------3bace003519d--
+(raw portrait.tga data)
+--AaB03x--
 }}}
 
-  * If X-Asset-Id is specified and the asset ID already exists, the old asset will be replaced
+  * If AssetID is specified and the asset already exists, the old asset will be replaced
   * Only one asset upload is allowed per request
 
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||Location||Location the new asset can be retrieved from||URI||
-||X-Asset-Id||UUID of the asset||UUID||
+||`Success`||True if an AssetID was returned, False if a Message was returned||Boolean||
+||`AssetID`||UUID of the created or updated asset||UUID||
+||`Message`||Error message||String||
+
+Success:
 
 {{{
-HTTP/1.1 201 Created
-Date: Wed, 09 Dec 2009 08:00:00 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Asset Server
-Location: /assets/f54a2666-30d7-4cdc-ac6c-ea96e075e528
-X-Asset-Id: f54a2666-30d7-4cdc-ac6c-ea96e075e528
+{
+    "Success":"true",
+    "AssetID":"f02ed1f6-c1fd-4781-b38a-f337e880f822"
+}
 }}}
 
-= Supported Response Codes =
-
-  * 200
-    * An existing asset was updated
-  * 201
-    * A new asset was successfully created
-  * 500
-    * Internal server error occurred
-
-= Code Examples =
-
-PHP:
+Failure:
 
 {{{
-$r = new HttpRequest('http://services.example.com/', HttpRequest::METH_POST, array("timeout"=>5,"useragent"=>"Example Services Client"));
-$r->addHeaders($headers);
-$r->AddPostFile(UUID::Random(), "eyewhite.tga", "image/tga");
-$r->send();
+{
+    "Success":"false",
+    "Message":"Content type not allowed"
+}
 }}}
