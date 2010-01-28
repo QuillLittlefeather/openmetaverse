@@ -32,7 +32,7 @@ RequestMethod=AddInventoryItem
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||ItemID||UUID of the newly created item||UUID||
+||ItemID||UUID of the created or updated item||UUID||
 
 {{{
 HTTP/1.1 200 OK
