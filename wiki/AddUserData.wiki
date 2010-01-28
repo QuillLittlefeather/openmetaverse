@@ -6,9 +6,10 @@
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddUserData||String||Yes||
 ||`ID`||UUID of the user to create or update information for||UUID||Yes||
-|| *`Variable Fields`* ||Any key name can be used (some common keys are given below). The value is stored as a free-form string, but applications should enforce more strict types for each key|| *`*`* ||Yes||
+|| *`Variable Fields`* ||Free form key value pairs|| *`*`* ||Yes||
 
   * User accounts are defined as a collection of arbitrary key/value pairs, with one exception. All user accounts must have a non-empty value stored for Name, which is the key used to determine if an account exists or not. More common examples of key/value pairs are given below.
+  * Values are stored as free form strings, but applications should enforce more strict type checking for each key
   * Set a key to an empty string to remove the key/value pair
   * Do not use this method to store login credentials such as a password hash. Use the AddIdentity method instead
 
