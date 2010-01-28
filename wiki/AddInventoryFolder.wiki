@@ -30,7 +30,7 @@ RequestMethod=AddInventoryFolder
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||FolderID||UUID of the folder||UUID||
+||FolderID||UUID of the created or updated folder||UUID||
 
 {{{
 HTTP/1.1 200 OK
