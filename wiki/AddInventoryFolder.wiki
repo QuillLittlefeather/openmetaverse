@@ -42,7 +42,7 @@ Content-Type: application/json
 
 = Supported Response Codes =
 
-  * 201
+  * 200
     * The folder was created
   * 500
     * Internal server error occurred
