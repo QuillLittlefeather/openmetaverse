@@ -1,14 +1,17 @@
-#summary Create an inventory folder.
+#summary Create or update an inventory folder.
 #labels Protocol-Inventory
 
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||RequestMethod||AddInventoryFolder||String||Yes||
+||ID||UUID of the folder to create or update||UUID||Optional||
 ||ParentID||The Parent folder UUID||UUID||Yes||
 ||OwnerID||UUID of the folder owner||UUID||Yes||
 ||Name||Folder name||String||Yes||
 ||ContentType||Preferred content type for this folder. Defaults to application/octet-stream||ContentType||Optional||
+
+* Specifying ID is only required for updating an existing folder
 
 {{{
 POST /services/ HTTP/1.1
@@ -43,7 +46,7 @@ Content-Type: application/json
 = Supported Response Codes =
 
   * 200
-    * The folder was created
+    * The folder was created or updated
   * 500
     * Internal server error occurred
 
