@@ -1,0 +1,50 @@
+#summary Add a new capability resource.
+#labels Protocol-User
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||AddCapability||String||Yes||
+||OwnerID||UUID of the owner of this capability||UUID||Yes||
+||Resource||URL of the protected resource this capability maps to||Uri||Yes||
+||Expiration||UTC timestamp when this capability will expire||UTC Timestamp||Yes||
+
+{{{
+POST /services/ HTTP/1.1
+Content-Length: 137
+Content-Type: application/x-www-form-urlencoded
+
+RequestMethod=AddCapability
+&OwnerID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+&Resource=http%3A%2F%2Fexample.com%2Fcap%2F
+&Expiration=1264451975
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||ID||UUID of the newly created capability||UUID||
+
+{{{
+HTTP/1.1 200 OK
+Date: Mon, 25 Jan 2010 20:43:35 GMT
+Server: Apache/2.2.10 (Linux/SUSE)
+X-Powered-By: Simian Grid Services
+Content-Length: 45
+Content-Type: application/json
+
+{
+  "ID":"c006082b-80eb-4d17-90ff-224412c574ea"
+}
+}}}
+
+= Supported Response Codes =
+
+  * 200
+    * An existing capability was updated with a new expiration
+  * 201
+    * A new capability was created
+  * 500
+    * Internal server error occurred
+
+= Code Examples =
