@@ -1,0 +1,44 @@
+#summary Initialize a fresh inventory for the specified user.
+#labels Protocol-Inventory
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||ID||UUID of user this inventory will belong to||UUID||Yes||
+
+{{{
+POST /services/ HTTP/1.1
+Content-Length: 78
+Content-Type: application/x-www-form-urlencoded
+
+RequestMethod=AddInventorySkeleton
+&ID=e4709e21-9a3f-4276-b3cc-22224bdf0199
+}}}
+
+  * If X-Asset-Id is specified and the asset ID already exists, the old asset will be replaced
+  * Only one asset upload is allowed per request
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||FolderID||UUID of the root folder||UUID||
+
+{{{
+HTTP/1.1 200 OK
+Date: Thu, 10 Dec 2009 23:20:55 GMT
+Server: Apache/2.2.10 (Linux/SUSE)
+X-Powered-By: Simian Grid Services
+Content-Length: 51
+Content-Type: application/json
+
+{ "FolderID":"cf836ad7-d7c2-45bd-97cc-48a6225d8263" }
+}}}
+
+= Supported Response Codes =
+
+  * 201
+    * The new library was created
+  * 500
+    * Internal server error occurred
+
+= Code Examples =
