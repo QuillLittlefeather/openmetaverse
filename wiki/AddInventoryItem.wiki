@@ -1,0 +1,35 @@
+#summary Create an inventory item.
+#labels Protocol-Inventory
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||RequestMethod||AddInventoryItem||String||Yes||
+||AssetID||UUID of the asset associated with this item||UUID||Yes||
+||ParentID||UUID of the parent folder||UUID||Yes||
+||OwnerID||UUID of the item owner||UUID||Yes||
+||Name||Name of the item||String||Yes||
+||Description||Description of the item||String||Yes||
+||ContentType||Content type for the item||ContentType||Yes||
+
+{{{
+TODO
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||ItemID||UUID of the newly created item||UUID||
+
+{{{
+TODO
+}}}
+
+= Supported Response Codes =
+
+  * 201
+    * A new item was successfully created
+  * 500
+    * Internal server error occurred
+
+= Code Examples =
