@@ -10,7 +10,7 @@
 ||Name||Folder name||String||Yes||
 ||ContentType||Preferred content type for this folder. Defaults to application/octet-stream||ContentType||Optional||
 
-<pre>
+{{{
 POST /services/ HTTP/1.1
 User-Agent: Simian Login Client
 Host: thorium.npl.com
@@ -18,15 +18,18 @@ Accept: */*
 Content-Length: 147
 Content-Type: application/x-www-form-urlencoded
 
-`RequestMethod`=`AddInventoryFolder`&ParentID=40f36b6d-d239-4ade-b354-f0f5cb9ce8f8&OwnerID=8e21c2df-32b2-472c-b09b-88b909ba4c86&Name=Default+Appearance
-</pre>
+RequestMethod=AddInventoryFolder
+&ParentID=40f36b6d-d239-4ade-b354-f0f5cb9ce8f8
+&OwnerID=8e21c2df-32b2-472c-b09b-88b909ba4c86
+&Name=Default+Appearance
+}}}
 
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
 ||FolderID||UUID of the folder||UUID||
 
-<pre>
+{{{
 HTTP/1.1 200 OK
 Date: Sun, 13 Dec 2009 07:23:43 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
@@ -35,7 +38,7 @@ Content-Length: 51
 Content-Type: application/json
 
 { "FolderID":"2cf49939-b9f0-45af-ad21-b3441de85f52" }
-</pre>
+}}}
 
 = Supported Response Codes =
 
