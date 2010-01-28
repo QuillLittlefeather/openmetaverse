@@ -30,23 +30,30 @@ RequestMethod=AddInventoryFolder
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||FolderID||UUID of the created or updated folder||UUID||
+||folder_id||UUID of the created or updated folder||UUID||
+
+Success:
 
 {{{
-HTTP/1.1 200 OK
-Date: Sun, 13 Dec 2009 07:23:43 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 51
-Content-Type: application/json
+{
+    "success":"true",
+    "folder_id":"2cf49939-b9f0-45af-ad21-b3441de85f52"
+}
+}}}
 
-{ "FolderID":"2cf49939-b9f0-45af-ad21-b3441de85f52" }
+Failure:
+
+{{{
+{
+    "success":"false",
+    "message":"Invalid OwnerID"
+}
 }}}
 
 = Supported Response Codes =
 
   * 200
-    * The folder was created or updated
+    * A success or failure response was returned
   * 500
     * Internal server error occurred
 
