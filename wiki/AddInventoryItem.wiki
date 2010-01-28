@@ -4,24 +4,17 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||RequestMethod||AddInventoryItem||String||Yes||
-||ID||UUID of the item to create or update||UUID||Optional||
-||AssetID||UUID of the asset associated with this item||UUID||Yes||
-||ParentID||UUID of the parent folder||UUID||Yes||
-||OwnerID||UUID of the item owner||UUID||Yes||
-||Name||Name of the item||String||Yes||
-||Description||Description of the item||String||Optional, defaults to an empty string||
+||`RequestMethod`||AddInventoryItem||String||Yes||
+||`ID`||UUID of the item to create or update||UUID||Optional||
+||`AssetID`||UUID of the asset associated with this item||UUID||Yes||
+||`ParentID`||UUID of the parent folder||UUID||Yes||
+||`OwnerID`||UUID of the item owner||UUID||Yes||
+||`Name`||Name of the item||String||Yes||
+||`Description`||Description of the item||String||Optional, defaults to an empty string||
 
   * ID is only required for updating an existing item
 
 {{{
-POST /services/ HTTP/1.1
-User-Agent: Simian Login Client
-Host: thorium.npl.com
-Accept: */*
-Content-Length: 164
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=AddInventoryItem
 &AssetID=1def56c1-6b83-492d-a7c1-2252b5545a82
 &ParentID=40f36b6d-d239-4ade-b354-f0f5cb9ce8f8
@@ -32,17 +25,26 @@ RequestMethod=AddInventoryItem
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
+||Success||True if an ItemID was returned, False if a Message was returned||Boolean||
 ||ItemID||UUID of the created or updated item||UUID||
+||Message||Error message||String||
+
+Success:
 
 {{{
-HTTP/1.1 200 OK
-Date: Sun, 13 Dec 2009 07:23:43 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 49
-Content-Type: application/json
+{
+    "Success":"true",
+    "ItemID":"2cf49939-b9f0-45af-ad21-b3441de85f52"
+}
+}}}
 
-{ "ItemID":"2cf49939-b9f0-45af-ad21-b3441de85f52" }
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"Invalid AssetID"
+}
 }}}
 
 = Supported Response Codes =
