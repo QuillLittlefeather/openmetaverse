@@ -25,9 +25,9 @@ RequestMethod=AddInventoryItem
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||Success||True if an ItemID was returned, False if a Message was returned||Boolean||
-||ItemID||UUID of the created or updated item||UUID||
-||Message||Error message||String||
+||`Success`||True if an ItemID was returned, False if a Message was returned||Boolean||
+||`ItemID`||UUID of the created or updated item||UUID||
+||`Message`||Error message||String||
 
 Success:
 
