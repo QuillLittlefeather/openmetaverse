@@ -5,14 +5,9 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetInventoryRoot||String||Yes||
-||OwnerID||UUID of the inventory owner||UUID||Yes||
+||`OwnerID`||UUID of the inventory owner||UUID||Yes||
 
 {{{
-POST /services/ HTTP/1.1
-User-Agent: Simian Login Client
-Content-Length: 72
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=GetRootFolder
 &OwnerID=2960f0cd-2bd3-4559-89ea-d86cc3696c7a
 }}}
@@ -20,18 +15,25 @@ RequestMethod=GetRootFolder
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||FolderID||UUID of the root folder||UUID||
+||`Success`||True if a FolderID was returned, False if a Message was returned||Boolean||
+||`FolderID`||UUID of the root folder||UUID||
+||`Message`||Error message||String||
+
+Success:
 
 {{{
-HTTP/1.1 200 OK
-Date: Tue, 08 Dec 2009 23:28:43 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 51
-Content-Type: application/json
-
 {
-  "FolderID":"3dc86b9d-da9d-4f7e-8ddb-5d5b06279b2e"
+    "Success":"true",
+    "FolderID":"3dc86b9d-da9d-4f7e-8ddb-5d5b06279b2e"
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"Inventory not found"
 }
 }}}
 
@@ -39,8 +41,6 @@ Content-Type: application/json
 
   * 200
     * Request was successful
-  * 404
-    * Inventory does not exist
   * 500
     * Internal server error occurred
 
