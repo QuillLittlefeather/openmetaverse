@@ -1,4 +1,4 @@
-#summary Add a new identity and login credentials and associate it with an existing user account.
+#summary Add a new identity and login credentials and associate it with an existing user account, or modify the credential of an existing identity.
 #labels Protocol-User
 
 User accounts can have multiple identities (login methods) associated with them.
@@ -7,16 +7,12 @@ User accounts can have multiple identities (login methods) associated with them.
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddIdentity||String||Yes||
-||Identifier||Identifier, for example a login name||String||Yes||
-||Credential||Credential, for example a hashed password||String||Yes||
-||Type||Identity type, such as "md5hash"||String||Yes||
-||UserID||UUID of the user to associate the identity with||UUID||Yes||
+||`Identifier`||Identifier, for example a login name||String||Yes||
+||`Credential`||Credential, for example a hashed password||String||Yes||
+||`Type`||Identity type, such as "md5hash"||String||Yes||
+||`UserID`||UUID of the user to associate the identity with||UUID||Yes||
 
 {{{
-POST /services/ HTTP/1.1
-Content-Length: 160
-Content-Type: application/x-www-form-urlencoded
-
 RequestMethod=AddIdentity
 &Identifier=loginname
 &Credential=%241%2479e01ab95f5df3ddf654224935644ff1
@@ -26,20 +22,28 @@ RequestMethod=AddIdentity
 
 = Response Format =
 
+||`Success`||True if an identity was created or updated, False if a Message was returned||Boolean||
+||`Message`||Error message||String||
+
+Success:
+
 {{{
-HTTP/1.1 200 OK
-Date: Wed, 09 Dec 2009 09:42:19 GMT
-Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Grid Services
-Content-Length: 0
+{
+    "Success":"true"
+}
+}}}
+
+{{{
+{
+    "Success":"false",
+    "Message:"User account not found"
+}
 }}}
 
 = Supported Response Codes =
 
   * 200
     * A new identity was successfully created, or an existing identity was updated with a new credential
-  * 404
-    * User account not found
   * 500
     * Internal server error occurred
 
