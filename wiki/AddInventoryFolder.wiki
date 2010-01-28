@@ -4,7 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||RequestMethod||AddInventoryFolder||String||Yes||
+||`RequestMethod`||AddInventoryFolder||String||Yes||
 ||ID||UUID of the folder to create or update||UUID||Optional||
 ||ParentID||The Parent folder UUID||UUID||Yes||
 ||OwnerID||UUID of the folder owner||UUID||Yes||
