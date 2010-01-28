@@ -34,9 +34,7 @@ Content-Type: application/json
 = Supported Response Codes =
 
   * 200
-    * The new library was created
-  * 409
-    * A library already exists for the user
+    * The new library was created, or a library already exists for this user
   * 500
     * Internal server error occurred
 
