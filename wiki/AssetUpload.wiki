@@ -1,4 +1,4 @@
-#summary Upload a new asset or replace an existing asset.
+#summary Create or replace an asset.
 #labels Protocol-Asset
 
 = Request Format =
