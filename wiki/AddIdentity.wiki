@@ -1,4 +1,4 @@
-#summary Add a new identity and login credentials and associate it with an existing user account, or modify the credential of an existing identity.
+#summary Add a new identity and login credentials and associate it with an existing user account, or modify an existing identity.
 #labels Protocol-User
 
 User accounts can have multiple identities (login methods) associated with them.
