@@ -4,6 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||AddInventory||String||Yes||
 ||`UserID`||UUID of the user this inventory will belong to||UUID||Yes||
 
 {{{
