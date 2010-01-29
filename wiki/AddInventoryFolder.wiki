@@ -10,6 +10,7 @@
 ||`OwnerID`||UUID of the folder owner||UUID||Yes||
 ||`Name`||Folder name||String||Yes||
 ||`ContentType`||Preferred content type for this folder. Defaults to application/octet-stream||ContentType||Optional||
+||`ExtraData`||Free form JSON data associated with this folder||JSON||Optional||
 
   * ID is only required for updating an existing folder
 
