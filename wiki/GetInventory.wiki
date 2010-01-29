@@ -4,7 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||`RequestMethod`||GetInventoryRoot||String||Yes||
+||`RequestMethod`||GetInventory||String||Yes||
 ||`UserID`||UUID of the inventory owner||UUID||Yes||
 
 {{{
