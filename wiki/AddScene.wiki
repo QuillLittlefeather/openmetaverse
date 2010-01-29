@@ -1,0 +1,43 @@
+#summary Create or update grid service information about a scene.
+#labels Protocol-Grid
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`SceneID`||UUID of the scene to add or update||UUID||Yes||
+||`Name`||Scene name||String||Yes||
+||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||Yes||
+||`MaxPosition`||Top northeast corner of the scene's bounding box||Vector3d||Yes||
+||`Address`||URL that is used for service communication with the scene||Uri||Yes||
+
+{{{
+RequestMethod=AddScene
+&ID=65d9cd99-8552-44a3-8f3f-73ac76121144
+&Name=Test+Scene
+&MinPosition=%3C128%2C+128%2C+25%3E
+&MaxPosition=%3C512%2C+512%2C+50%3E
+&Address=http://simulator.example.com:12035/scenes/Test%20Scene
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if the scene was successfully registered, False if a Message was returned||Boolean||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true"
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"Bounding box collides with existing scene"
+}
+}}}
