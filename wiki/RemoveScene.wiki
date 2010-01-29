@@ -9,7 +9,7 @@
 
 {{{
 RequestMethod=RemoveScene
-&UserID=ceb3c0c7-c610-49cb-b89f-479b67f1fcbe
+&SceneID=ceb3c0c7-c610-49cb-b89f-479b67f1fcbe
 }}}
 
 = Response Format =
