@@ -30,7 +30,6 @@ RequestMethod=AddUserData
 &ID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
 &Name=John+Doe
 &Email=john.doe%40email.com
-&Online=1
 }}}
 
 = Response Format =
