@@ -13,9 +13,9 @@ RequestMethod=GetLibraryRoot
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-|||`Success`||True if a FolderID and OwnerID were returned, False if a Message was returned||Boolean||
+|||`Success`||True if a FolderID and UserID were returned, False if a Message was returned||Boolean||
 ||`FolderID`||UUID of the library root folder||UUID||
-||`OwnerID`||UUID of the library owner||UUID||
+||`UserID`||UUID of the library owner||UUID||
 ||`Message`||Error message||String||
 
 Success:
