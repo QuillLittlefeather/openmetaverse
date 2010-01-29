@@ -43,6 +43,6 @@ Failure:
 {{{
 {
     "Success":"false",
-    "Message:"User does not exist"
+    "Message":"User does not exist"
 }
 }}}
