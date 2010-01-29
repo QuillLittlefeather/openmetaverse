@@ -1,0 +1,37 @@
+#summary Initialize a fresh inventory for the specified user.
+#labels Protocol-Inventory
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`UserID`||UUID of the user this inventory will belong to||UUID||Yes||
+
+{{{
+RequestMethod=AddInventory
+&ID=e4709e21-9a3f-4276-b3cc-22224bdf0199
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if a FolderID was returned, False if a Message was returned||Boolean||
+||`FolderID`||UUID of the root folder||UUID||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true",
+    "FolderID":"cf836ad7-d7c2-45bd-97cc-48a6225d8263"
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"User account not found"
+}
+}}}
