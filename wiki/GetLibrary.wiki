@@ -1,4 +1,5 @@
 #summary Retrieve the root folder UUID and owner UUID for the shared inventory library.
+#labels Protocol-Inventory
 
 = Request Format =
 
@@ -14,7 +15,7 @@ RequestMethod=GetLibrary
 || *Parameter* || *Description* || *Type* ||
 |||`Success`||True if a FolderID and UserID were returned, False if a Message was returned||Boolean||
 ||`FolderID`||UUID of the library root folder||UUID||
-||`UserID`||UUID of the library owner||UUID||
+||`OwnerID`||UUID of the library owner||UUID||
 ||`Message`||Error message||String||
 
 Success:
@@ -23,7 +24,7 @@ Success:
 {
     "Success":"true",
     "FolderID":"99ffc001-40b6-47ee-92c1-d5be0bd71ea6",
-    "UserID":"d52bbd77-8df6-4c4c-855f-d3fd1dda3600"
+    "OwnerID":"d52bbd77-8df6-4c4c-855f-d3fd1dda3600"
 }
 }}}
 
