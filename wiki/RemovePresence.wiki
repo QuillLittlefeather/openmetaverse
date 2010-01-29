@@ -1,0 +1,38 @@
+#summary Marks a user account as offline (if it is not already).
+#labels Protocol-User
+
+This is a read-write method like GetPresence. It will set the `SessionID` and `SecureSessionID` user data fields to UUID.Zero.
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||RemovePresence||String||Yes||
+||`UserID`||UUID of the user to mark as offline||UUID||Yes||
+
+{{{
+RequestMethod=RemovePresence
+&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if the was marked as offline or was already offline, False if a Message was returned||Boolean||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true",
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"User does not exist"
+}
+}}}
