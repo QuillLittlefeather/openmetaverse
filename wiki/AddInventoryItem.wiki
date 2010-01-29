@@ -5,7 +5,7 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddInventoryItem||String||Yes||
-||`ID`||UUID of the item to create or update||UUID||Optional||
+||`ItemID`||UUID of the item to create or update||UUID||Optional||
 ||`AssetID`||UUID of the asset associated with this item||UUID||Yes||
 ||`ParentID`||UUID of the parent folder||UUID||Yes||
 ||`OwnerID`||UUID of the item owner||UUID||Yes||
