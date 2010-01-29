@@ -11,6 +11,7 @@
 ||`OwnerID`||UUID of the item owner||UUID||Yes||
 ||`Name`||Name of the item||String||Yes||
 ||`Description`||Description of the item||String||Optional, defaults to an empty string||
+||`ExtraData`||Free form JSON data associated with this item||JSON||Optional||
 
   * ID is only required for updating an existing item
 
