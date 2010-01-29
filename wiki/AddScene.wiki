@@ -4,6 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||AddScene||String||Yes||
 ||`SceneID`||UUID of the scene to add or update||UUID||Yes||
 ||`Name`||Scene name||String||Yes||
 ||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||Yes||
