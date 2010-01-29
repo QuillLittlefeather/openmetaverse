@@ -1,4 +1,4 @@
-#summary Marks a user account as offline (if it is not already).
+#summary Mark a user account as offline (if it is not already).
 #labels Protocol-User
 
 This is a read-write method like GetPresence. It will set the `SessionID` and `SecureSessionID` user data fields to UUID.Zero.
