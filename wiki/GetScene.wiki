@@ -1,0 +1,49 @@
+#summary Returns information about a scene.
+#labels Protocol-Grid
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||GetScene||String||Yes||
+||`SceneID`||UUID of the scene to retrieve information for||UUID||Optional^1^||
+||`Position`||Position vector to start searching for a nearby scene||Vector3d||Optional^1^||
+
+  * ^1^Either SceneID or Position must be specified
+
+{{{
+RequestMethod=GetScene
+&SceneID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if scene information was returned, False if a Message was returned||Boolean||
+||`SceneID`||UUID of the scene||UUID||
+||`Name`||Scene name||String||
+||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||
+||`MaxPosition`||Top northeast corner of the scene's bounding box||Vector3d||
+||`Address`||URL that is used for service communication with the scene||Uri||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true",
+    "SceneID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
+    "Name":"Test Scene",
+    "MinPosition": [256, 256, 25],
+    "MaxPosition": [512, 512, 50],
+    "Address":"http://simulator.example.com:12035/scenes/Test%20Scene"
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"No matching scene found"
+}
+}}}
