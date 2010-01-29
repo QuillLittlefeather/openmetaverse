@@ -5,11 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddInventory||String||Yes||
-||`UserID`||UUID of the user this inventory will belong to||UUID||Yes||
+||`OwnerID`||UUID of the user this inventory will belong to||UUID||Yes||
 
 {{{
 RequestMethod=AddInventory
-&ID=e4709e21-9a3f-4276-b3cc-22224bdf0199
+&OwnerID=e4709e21-9a3f-4276-b3cc-22224bdf0199
 }}}
 
 = Response Format =
