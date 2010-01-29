@@ -5,11 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetInventory||String||Yes||
-||`UserID`||UUID of the inventory owner||UUID||Yes||
+||`OwnerID`||UUID of the inventory owner||UUID||Yes||
 
 {{{
 RequestMethod=GetRootFolder
-&UserID=2960f0cd-2bd3-4559-89ea-d86cc3696c7a
+&OwnerID=2960f0cd-2bd3-4559-89ea-d86cc3696c7a
 }}}
 
 = Response Format =
