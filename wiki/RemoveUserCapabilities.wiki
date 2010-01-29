@@ -5,11 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||RemoveUserCapabilities||String||Yes||
-||`UserID`||UUID of the user to remove all capabilities for||UUID||Yes||
+||`OwnerID`||UUID of the user to remove all capabilities for||UUID||Yes||
 
 {{{
 RequestMethod=RemoveUserCapabilities
-&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+&OwnerID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
 }}}
 
 = Response Format =
