@@ -28,9 +28,11 @@ RequestMethod=GetScenes
 || *Parameter* || *Description* || *Type* ||
 ||`SceneID`||UUID of the scene||UUID||
 ||`Name`||Scene name||String||
+||`Enabled`||True if the scene is online and able to receive communication||Boolean||
 ||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||
 ||`MaxPosition`||Top northeast corner of the scene's bounding box||Vector3d||
 ||`Address`||URL that is used for service communication with the scene||Uri||
+||`ExtraData`||Free form JSON data associated with the scene||JSON||
 
 Success:
 
@@ -42,9 +44,11 @@ Success:
         {
             "SceneID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
             "Name":"Test Scene",
-            "MinPosition": [256, 256, 25],
-            "MaxPosition": [512, 512, 50],
-            "Address":"http://simulator.example.com:12035/scenes/Test%20Scene"
+            "Enabled":true,
+            "MinPosition":[256, 256, 25],
+            "MaxPosition":[512, 512, 50],
+            "Address":"http://simulator.example.com:12035/scenes/Test%20Scene",
+            "ExtraData":{}
         }
     ]
 }
