@@ -6,11 +6,13 @@
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddScene||String||Yes||
 ||`SceneID`||UUID of the scene to add or update||UUID||Yes||
-||`Name`||Scene name||String||Yes||
-||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||Yes||
-||`MaxPosition`||Top northeast corner of the scene's bounding box||Vector3d||Yes||
-||`Address`||URL that is used for service communication with the scene||Uri||Yes||
+||`Name`||Scene name||String||Optional^1^||
+||`MinPosition`||Bottom southwest corner of the scene's bounding box||Vector3d||Optional^1^||
+||`MaxPosition`||Top northeast corner of the scene's bounding box||Vector3d||Optional^1^||
+||`Address`||URL that is used for service communication with the scene||Uri||Optional^1^||
 ||`Enabled`||True if this scene is online and can accept service communication||Boolean||Yes||
+
+  * ^1^These parameters are required if Enabled is True
 
 {{{
 RequestMethod=AddScene
