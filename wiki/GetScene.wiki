@@ -7,6 +7,7 @@
 ||`RequestMethod`||GetScene||String||Yes||
 ||`SceneID`||UUID of the scene to retrieve information for||UUID||Optional^1^||
 ||`Position`||Position vector to start searching for a nearby scene||Vector3d||Optional^1^||
+||`Enabled`||If True, only Enabled scenes will be searched||Boolean||Optional, defaults to False||
 
   * ^1^Either `SceneID` or `Position` must be specified
 
