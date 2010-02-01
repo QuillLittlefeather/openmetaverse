@@ -1,0 +1,39 @@
+#summary Mark a user account as offline (if it is not already).
+#labels Protocol-User
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||RemovePresence||String||Yes||
+||`UserID`||UUID of the user to remove all sessions for||UUID||Optional||
+||`SessionID`||Session identifier to remove||UUID||Optional^1^||
+
+  * ^1^Either UserID or SessionID must be specified
+
+{{{
+RequestMethod=RemovePresence
+&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if the requested session or all sessions for the requested user were removed, False if a Message was returned||Boolean||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true",
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"An unknown error occurred"
+}
+}}}
