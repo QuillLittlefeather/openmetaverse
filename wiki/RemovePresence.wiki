@@ -1,7 +1,7 @@
 #summary Mark a user account as offline (if it is not already).
 #labels Protocol-User
 
-This is a read-write method like GetPresence. It will set the `SessionID`, `SecureSessionID`, and `CurrentRegionID` user data fields to UUID.Zero.
+This is a read-write method like GetPresence. It will clear the `SessionID`, `SecureSessionID`, and `CurrentRegionID` user data fields.
 
 = Request Format =
 
