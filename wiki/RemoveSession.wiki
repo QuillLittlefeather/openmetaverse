@@ -4,7 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||`RequestMethod`||RemovePresence||String||Yes||
+||`RequestMethod`||RemoveSession||String||Yes||
 ||`UserID`||UUID of the user to remove all sessions for||UUID||Optional||
 ||`SessionID`||Session identifier to remove||UUID||Optional^1^||
 
