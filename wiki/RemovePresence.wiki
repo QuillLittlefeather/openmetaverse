@@ -1,13 +1,14 @@
 #summary Mark a user account as offline (if it is not already).
 #labels Protocol-User
 
-This is a read-write method like GetPresence. It will clear the `SessionID`, `SecureSessionID`, and `CurrentRegionID` user data fields.
-
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||RemovePresence||String||Yes||
-||`UserID`||UUID of the user to mark as offline||UUID||Yes||
+||`UserID`||UUID of the user to remove all sessions for||UUID||Optional||
+||`SessionID`||Session identifier to remove||UUID||Optional^1^||
+
+  * ^1^Either UserID or SessionID must be specified
 
 {{{
 RequestMethod=RemovePresence
@@ -17,7 +18,7 @@ RequestMethod=RemovePresence
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||`Success`||True if the was marked as offline or was already offline, False if a Message was returned||Boolean||
+||`Success`||True if the requested session or all sessions for the requested user were removed, False if a Message was returned||Boolean||
 ||`Message`||Error message||String||
 
 Success:
@@ -33,6 +34,6 @@ Failure:
 {{{
 {
     "Success":"false",
-    "Message":"User does not exist"
+    "Message":"An unknown error occurred"
 }
 }}}
