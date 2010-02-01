@@ -1,6 +1,8 @@
 #summary Returns user account data.
 #labels Protocol-User
 
+See AddUserData for a list of common user data fields.
+
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
