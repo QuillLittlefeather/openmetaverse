@@ -5,7 +5,7 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||RemoveSession||String||Yes||
-||`UserID`||UUID of the user to remove all sessions for||UUID||Optional||
+||`UserID`||UUID of the user to remove all sessions for||UUID||Optional^1^||
 ||`SessionID`||Session identifier to remove||UUID||Optional^1^||
 
   * ^1^Either UserID or SessionID must be specified
