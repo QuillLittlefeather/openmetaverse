@@ -11,7 +11,7 @@
   * ^1^Either UserID or SessionID must be specified
 
 {{{
-RequestMethod=RemovePresence
+RequestMethod=RemoveSession
 &UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
 }}}
 
