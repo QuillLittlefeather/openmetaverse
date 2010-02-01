@@ -18,9 +18,6 @@
 || *Parameter* || *Description* || *Type* ||
 ||`Name`||Account name, such as "John Doe"||String||
 ||`Email`||User's primary e-mail address||String||
-||`SessionID`||Current session identifier. Will be UUID.Zero if the user is offline||UUID||
-||`SecureSessionID`||Current secure session identifier (must only be transmitted across secure channels)||UUID||
-||`CurrentRegionID`||UUID of the avatar's current region. Will be UUID.Zero if the user is offline||UUID||
 ||`CreationDate`||UTC timestamp when this account was created||UTC Timestamp||
 ||`LastLoginDate`||UTC timestamp when this account last logged in||UTC Timestamp||
 ||`HomeLocation`||Uri describing this account's home location||Uri||
