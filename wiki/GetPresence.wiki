@@ -1,7 +1,7 @@
 #summary Mark a user account as online (if it is not already) and returns user account data.
 #labels Protocol-User
 
-This method is similar to GetUserData, but in read-write mode. If the user is not already online it will generated random IDs for the `SessionID` and `SecureSessionID` user data fields before returning all of the user account data. LastLoginDate is updated with the current timestamp after the user account data is returned.
+This method is similar to GetUserData, but in read-write mode. If the user is not already online it will generated random IDs for the `SessionID` and `SecureSessionID` user data fields before returning all of the user account data. `LastLoginDate` is updated with the current timestamp after the user account data is returned.
 
 = Request Format =
 
