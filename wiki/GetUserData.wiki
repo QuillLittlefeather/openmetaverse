@@ -1,8 +1,6 @@
 #summary Returns user account data.
 #labels Protocol-User
 
-This method will return account data whether the user is online or offline, and will not modify any user data fields.
-
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
@@ -29,8 +27,6 @@ Success:
     "UserID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
     "Name":"John Doe",
     "Email":"john.doe@email.com",
-    "SessionID":"00000000-0000-0000-0000-000000000000",
-    "SecureSessionID":"00000000-0000-0000-0000-000000000000",
     "CreationDate":"1261042614",
     "LastLoginDate":"1264728529",
     "HomeLocation":"http://examplegrid.com/scenes/Homeland/128/128/25",
