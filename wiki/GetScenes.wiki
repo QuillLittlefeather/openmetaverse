@@ -9,6 +9,7 @@
 ||`MinPosition`||Bottom southwest corner of the bounding box to search for scenes inside of||Vector3d||Optional^1^||
 ||`MaxPosition`||Top northeast corner of the bounding box to search for scenes inside of||Vector3d||Optional^1^||
 ||`Enabled`||If True, only Enabled scenes will be searched||Boolean||Optional, defaults to False||
+||`MaxNumber`||Maximum number of results to return||Integer||Optional||
 
   * ^1^Either `NameQuery` or both `MinPosition` and `MaxPosition` must be specified
 
