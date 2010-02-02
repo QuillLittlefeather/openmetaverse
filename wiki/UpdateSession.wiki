@@ -7,10 +7,10 @@
 ||`RequestMethod`||UpdateSession||String||Yes||
 ||`SessionID`||UUID of the session to update||UUID||Yes||
 ||`SecureSessionID`||Secure identifier to use for this session. Must only be transmitted across secure channels||UUID||Optional||
-||`SceneID`||
-||`ScenePosition`||
-||`SceneLookAt`||
-||`ExtraData`||
+||`SceneID`||UUID of the scene that the avatar is currently in||UUID||Optional||
+||`ScenePosition`||Scene-relative current position of the avatar||Vector3d||Optional||
+||`SceneLookAt`||Normalized direction vector where the avatar is currently looking||Vector3d||Optional||
+||`ExtraData`||Free form JSON data attached to the session||JSON||Optional||
 
 {{{
 RequestMethod=UpdateSession
