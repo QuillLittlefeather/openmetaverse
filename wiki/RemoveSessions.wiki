@@ -1,0 +1,39 @@
+#summary Remove one or more sessions.
+#labels Protocol-User
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||RemoveSessions||String||Yes||
+||`UserID`||UUID of the user to remove all sessions for||UUID||Optional^1^||
+||`SceneID`||Remove all sessions currently residing in this scene||UUID||Optional^1^||
+
+  * ^1^Either UserID or SceneID must be specified
+
+{{{
+RequestMethod=RemoveSessions
+&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if all requested sessions were erased or there were no sessions to erase, False if a Message was returned||Boolean||
+||`Message`||Error message||String||
+
+Success:
+
+{{{
+{
+    "Success":"true",
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":"false",
+    "Message":"An unknown error occurred"
+}
+}}}
