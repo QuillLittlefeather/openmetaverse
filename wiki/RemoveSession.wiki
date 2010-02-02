@@ -5,20 +5,17 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||RemoveSession||String||Yes||
-||`UserID`||UUID of the user to remove all sessions for||UUID||Optional^1^||
-||`SessionID`||Session identifier to remove||UUID||Optional^1^||
-
-  * ^1^Either UserID or SessionID must be specified
+||`SessionID`||Session identifier to remove||UUID||Yes||
 
 {{{
 RequestMethod=RemoveSession
-&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+&SessionID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
 }}}
 
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||`Success`||True if the requested session or all sessions for the requested user were removed, False if a Message was returned||Boolean||
+||`Success`||True if the requested session was removed or did not exist, False if a Message was returned||Boolean||
 ||`Message`||Error message||String||
 
 Success:
