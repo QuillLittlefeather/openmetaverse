@@ -1,4 +1,4 @@
-#summary Remove one or more sessions.
+#summary Remove one or more login sessions.
 #labels Protocol-User
 
 = Request Format =
