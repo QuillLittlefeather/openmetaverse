@@ -1,4 +1,4 @@
-#summary Mark a user account as offline (if it is not already).
+#summary Remove a single login session.
 #labels Protocol-User
 
 = Request Format =
