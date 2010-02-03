@@ -4,7 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||`RequestMethod`||AddSession||String||Yes||
+||`RequestMethod`||GetSession||String||Yes||
 ||`SessionID`||UUID of the session to request||UUID||Optional||
 
 {{{
