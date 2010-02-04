@@ -1,0 +1,44 @@
+#summary Open Metaverse Foundation contribution policy for BSD-licensed projects.
+#labels Featured
+
+= Contribution Policy =
+
+To make sure that we can accept your contributions and continue to distribute Open Metaverse Foundation software under the most free license possible, any contributions need to follow the following licensing conditions:
+
+    * Your contribution is either wholly your own, or if it contains third party materials, they are licensed in a manner compatible with the Open Metaverse Foundation BSD license. If you rely on third party contributions, maintain the original licensing and copyright headers on source code or include a copy of the original license with binaries. We cannot accept any code under the GPL or similar licenses unless there is a specific F/OSS exemption for BSD-licensed projects.
+
+    * You accept whole liability for any contributions you make for inclusion of third party intellectual property, in the jurisdiction of both yourself, and where the servers are located (United States). If you are unsure about the licensing conditions for a piece of source, do not include it and work around it. If you have a problem here, ask the rest of the developers as they may be able to help. 
+
+    * You have not witnessed, seen or been party to the development of closed source software developed by Linden Lab. If you have been involved in in-house software development for Linden Lab, your contributions may affect the licensing of the main codebase and we cannot accept any contributions without a waiver from Linden Lab disclaiming any interest in your contributions.
+
+    * You have not copied source code from the GPL Second Life viewer to submit your contribution. This includes other viewers (e.g. Hippo Viewer, Meerkat) derived from that codebase.
+
+    * You have not studied source code from the GPL Second Life viewer or its derivatives within the last six (6) months. 
+
+    * You submit your contributions to the repository under the Open Metaverse Foundation BSD license below.
+
+= Open Metaverse Foundation BSD License =
+
+{{{
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+3. The name of the author may not be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
+IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT
+NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+}}}
