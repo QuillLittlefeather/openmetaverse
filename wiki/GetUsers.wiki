@@ -5,11 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetUsers||String||Yes||
-||`Name`||Search query to match against account names||String||Yes||
+||`NameQuery`||Search query to match against account names||String||Yes||
 
 {{{
 RequestMethod=GetUsers
-&Name=John
+&NameQuery=John
 }}}
 
 = Response Format =
