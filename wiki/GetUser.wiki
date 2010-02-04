@@ -35,7 +35,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "User":
     {
         "UserID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
@@ -53,7 +53,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"User does not exist"
 }
 }}}

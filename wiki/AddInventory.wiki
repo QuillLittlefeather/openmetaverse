@@ -23,7 +23,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "FolderID":"cf836ad7-d7c2-45bd-97cc-48a6225d8263"
 }
 }}}
@@ -32,7 +32,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"User account not found"
 }
 }}}

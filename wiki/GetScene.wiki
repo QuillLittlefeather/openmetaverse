@@ -33,7 +33,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "SceneID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
     "Name":"Test Scene",
     "Enabled":true,
@@ -48,7 +48,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"No matching scene found"
 }
 }}}

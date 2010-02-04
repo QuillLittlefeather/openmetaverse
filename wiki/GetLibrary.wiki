@@ -22,7 +22,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "FolderID":"99ffc001-40b6-47ee-92c1-d5be0bd71ea6",
     "OwnerID":"d52bbd77-8df6-4c4c-855f-d3fd1dda3600"
 }
@@ -32,7 +32,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Shared library does not exist"
 }
 }}}

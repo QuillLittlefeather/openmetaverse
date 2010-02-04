@@ -58,7 +58,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "Items":
     [
         {
@@ -92,7 +92,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Item or folder not found"
 }
 }}}

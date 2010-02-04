@@ -32,7 +32,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "FolderID":"2cf49939-b9f0-45af-ad21-b3441de85f52"
 }
 }}}
@@ -41,7 +41,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Parent folder does not exist"
 }
 }}}

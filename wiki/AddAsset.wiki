@@ -43,7 +43,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "AssetID":"f02ed1f6-c1fd-4781-b38a-f337e880f822"
 }
 }}}
@@ -52,7 +52,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Content type not allowed"
 }
 }}}
