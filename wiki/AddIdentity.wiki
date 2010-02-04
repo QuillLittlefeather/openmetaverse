@@ -30,7 +30,7 @@ Success:
 
 {{{
 {
-    "Success":"true"
+    "Success":true
 }
 }}}
 
@@ -38,7 +38,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"User account not found"
 }
 }}}

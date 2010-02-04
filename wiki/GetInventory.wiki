@@ -23,7 +23,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "FolderID":"3dc86b9d-da9d-4f7e-8ddb-5d5b06279b2e"
 }
 }}}
@@ -32,7 +32,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Inventory not found"
 }
 }}}

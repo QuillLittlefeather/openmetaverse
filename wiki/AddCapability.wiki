@@ -27,7 +27,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
     "CapabilityID":"c006082b-80eb-4d17-90ff-224412c574ea"
 }
 }}}
@@ -36,7 +36,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Expiration date is in the past"
 }
 }}}
