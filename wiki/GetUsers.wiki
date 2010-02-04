@@ -6,6 +6,7 @@
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetUsers||String||Yes||
 ||`NameQuery`||Search query to match against account names||String||Yes||
+||`MaxNumber`||Maximum number of accounts to return||Integer||Optional||
 
 {{{
 RequestMethod=GetUsers
