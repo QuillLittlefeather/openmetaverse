@@ -12,12 +12,10 @@
   * ^2^Values are stored as free form strings, but applications should enforce more strict type checking
   * Set a key to an empty string to remove the key/value pair
   * Do not use this method to store login credentials such as a password hash. Use the AddIdentity method instead
-  * The field names "UserID", "Success", and "Message" are reserved
+  * The field names "UserID", "Name", and "Email" are reserved
 
 === Common Fields ===
 || *Parameter* || *Description* || *Type* ||
-||`Name`||Account name, such as "John Doe"||String||
-||`Email`||User's primary e-mail address||String||
 ||`CreationDate`||UTC timestamp when this account was created||UTC Timestamp||
 ||`LastLoginDate`||UTC timestamp when this account last logged in||UTC Timestamp||
 ||`HomeLocation`||Uri describing this account's home location||Uri||
@@ -27,8 +25,8 @@
 {{{
 RequestMethod=AddUserData
 &UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
-&Name=John+Doe
-&Email=john.doe%40email.com
+&LastLoginDate=1265252882
+&Suspended=1
 }}}
 
 = Response Format =
@@ -41,7 +39,7 @@ Success:
 
 {{{
 {
-    "Success":"true",
+    "Success":true,
 }
 }}}
 
@@ -49,7 +47,7 @@ Failure:
 
 {{{
 {
-    "Success":"false",
+    "Success":false,
     "Message":"Field name is reserved"
 }
 }}}
