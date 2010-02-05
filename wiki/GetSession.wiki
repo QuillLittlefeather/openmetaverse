@@ -22,6 +22,7 @@ RequestMethod=GetSession
 ||`SceneID`||UUID of the scene that the avatar is currently in||UUID||
 ||`ScenePosition`||Scene-relative current position of the avatar||Vector3d||
 ||`SceneLookAt`||Normalized direction vector where the avatar is currently looking||Vector3d||
+||`ExtraData`||Free form JSON data attached to this session||JSON||
 ||`Message`||Error message||String||
 
 Success:
@@ -34,6 +35,7 @@ Success:
     "SceneID":"506e6610-1098-11df-8a39-0800200c9a66",
     "ScenePosition":[128,128,25],
     "SceneLookAt":[1,0,0],
+    "ExtraData":{}
 }
 }}}
 
