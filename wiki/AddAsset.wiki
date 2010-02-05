@@ -7,6 +7,7 @@
 ||`AssetID`||UUID of the asset||UUID||Optional||
 ||`CreatorID`||UUID of the asset creator||UUID||Yes||
 ||`Asset`||Raw asset data||Binary||Yes||
+||`Temporary`||True if this is a temporary asset||Boolean||Optional||
 
 {{{
 POST /assets/ HTTP/1.1
@@ -22,11 +23,15 @@ Content-Disposition: form-data; name="CreatorID"
 
 5a514c21-1278-4f85-b28c-3cda253c98e4
 --AaB03x
-Content-Disposition: form-data; name="Asset"; filename="portrait.tga"
+Content-Disposition: form-data; name="Asset"; filename="tempimage.tga"
 Content-Type: image/tga
 
 (raw portrait.tga data)
 --AaB03x--
+Content-Disposition: form-data; name="Temporary"
+
+1
+--AaB03x
 }}}
 
   * If AssetID is specified and the asset already exists, the old asset will be replaced
