@@ -9,7 +9,7 @@
 ||`SessionID`||Identifier to use for this session||UUID||Optional||
 ||`SecureSessionID`||Secure identifier to use for this session. Must only be transmitted across secure channels||UUID||Optional||
 
-  * If a new session is being created when `SessionID` and `SecureSessionID` are not specified, they will be randomly generated.
+  * If `SessionID` and `SecureSessionID` are not specified they will be randomly generated.
   * `LastLoginDate` in the user's account data is updated with the current timestamp.
 
 {{{
