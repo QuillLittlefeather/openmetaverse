@@ -42,6 +42,7 @@ Content-Disposition: form-data; name="Temporary"
 || *Parameter* || *Description* || *Type* ||
 ||`Success`||True if an AssetID was returned, False if a Message was returned||Boolean||
 ||`AssetID`||UUID of the created or updated asset||UUID||
+||`Status`||One of three values: "Created", "Updated", or "Unchanged"||String||
 ||`Message`||Error message||String||
 
 Success:
@@ -49,7 +50,8 @@ Success:
 {{{
 {
     "Success":true,
-    "AssetID":"f02ed1f6-c1fd-4781-b38a-f337e880f822"
+    "AssetID":"f02ed1f6-c1fd-4781-b38a-f337e880f822",
+    "Status":"Created"
 }
 }}}
 
@@ -61,3 +63,5 @@ Failure:
     "Message":"Content type not allowed"
 }
 }}}
+
+== Response Codes ==
