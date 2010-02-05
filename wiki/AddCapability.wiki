@@ -5,6 +5,7 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddCapability||String||Yes||
+||`CapabilityID`||UUID of the capability to create. Can be used to update a capability||UUID||Optional||
 ||`OwnerID`||UUID of the owner of this capability||UUID||Yes||
 ||`Resource`||URL of the protected resource this capability maps to||Uri||Yes||
 ||`Expiration`||UTC timestamp when this capability will expire||UTC Timestamp||Yes||
