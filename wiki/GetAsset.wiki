@@ -10,7 +10,7 @@ GET /assets/e1d3e830-36cd-4232-aa8c-01325320e533 HTTP/1.1
 = Response Format =
 
 || *Header* || *Description* || *Type* ||
-||Content-SHA1||The SHA-1 hash of the asset||40-character hexadecimal string||
+||ETag||The SHA-256 hash of the asset||64-character hexadecimal string||
 ||Last-Modified||RFC870 timestamp||RFC870 Timestamp||
 ||X-Asset-Creator-ID||UUID of the asset's creator||UUID||
 ||Content-Type||The content type of the asset||ContentType||
@@ -20,7 +20,7 @@ HTTP/1.1 200 OK
 Date: Wed, 09 Dec 2009 07:48:17 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
 X-Powered-By: Simian Asset Server
-Content-SHA1: cc36b88d9d2dcd1f4a00bc76546a767e367cfd39
+ETag: 50d858e0985ecc7f60418aaf0cc5ab587f42c2570a884095a9e8ccacd0f6545c
 Last-Modified: Wednesday, 09-Dec-09 07:48:17 GMT
 X-Asset-Creator-ID: b9f9048e-2af0-4dba-ae24-9e23d5511ace
 Transfer-Encoding: chunked
@@ -33,6 +33,8 @@ Content-Type: image/tga
 
   * 200
     * Asset data follows
+  * 403
+    * Asset data is not publicly accessible
   * 404
     * Asset was not found
   * 500
