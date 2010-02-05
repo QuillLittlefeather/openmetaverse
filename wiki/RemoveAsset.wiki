@@ -15,7 +15,6 @@ Asset successfully removed:
 HTTP/1.1 204 No Content
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Asset Server
 }}}
 
 Asset not found:
@@ -24,7 +23,6 @@ Asset not found:
 HTTP/1.1 404 Not Found
 Date: Wed, 09 Dec 2009 07:36:06 GMT
 Server: Apache/2.2.10 (Linux/SUSE)
-X-Powered-By: Simian Asset Server
 }}}
 
 = Supported Response Codes =
