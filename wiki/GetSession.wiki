@@ -30,6 +30,7 @@ Success:
 {{{
 {
     "Success":true,
+    "UserID":"736828f0-11f5-11df-8a39-0800200c9a66",
     "SessionID":"23e8bfa6-2123-4499-9670-9fe537e3e1f7",
     "SecureSessionID":"905e167a-0330-4b5c-9a1e-f940e2925303",
     "SceneID":"506e6610-1098-11df-8a39-0800200c9a66",
