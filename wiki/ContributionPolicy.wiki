@@ -17,6 +17,15 @@ To make sure that we can accept your contributions and continue to distribute Op
 
     * You submit your contributions to the repository under the Open Metaverse Foundation BSD license below.
 
+== Documentation ==
+Accurate and descriptive documentation is critical for the long term viability of an open source project. As contributors come and go, projects survive by making it as easy as possible for new developers to understand both high level architectural concepts and low level methods. Use common sense here, from the perspective of a new contributor that is trying to understand your code. Methods that are called from external modules should be documented with their purpose, expected inputs, and expected outputs. Complex or obscure routines should have inline documentation to annotate each step. Replace inline magic numbers with constants and a brief description of what the constant does. All networking protocols must be documented on the wiki.
+
+== Coding Conventions ==
+Another facet of keeping the learning curve low is maintaining readable code. Open Metaverse Foundation projects use a similar coding convention whether they are written in C#, PHP or any other language, although conventions differ slightly for each language and possibly each project. Study the conventions used in a project you are contributing to before submitting a patch or new code. Code that deviates from the standard conventions will need to be cleaned up before applying, slowing down the patching process and possibly requiring a re-submission.
+
+== Maintainers ==
+Although all of the projects hosted here are open source and every approved developer has commit rights to any project or module, a concept of maintainers is loosely enforced to make sure every part of the codebase is receiving adequate attention. Projects and major subsystems of projects have one or more maintainers at any given time who are responsible for reviewing patches, producing unit tests and fixing regressions, and providing support and/or documentation to other developers for their module.
+
 = Open Metaverse Foundation BSD License =
 
 <pre>
