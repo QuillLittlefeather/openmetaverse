@@ -7,7 +7,8 @@
 ||`AssetID`||UUID of the asset||UUID||Optional||
 ||`CreatorID`||UUID of the asset creator||UUID||Yes||
 ||`Asset`||Raw asset data||Binary||Yes||
-||`Temporary`||True if this is a temporary asset||Boolean||Optional||
+||`Temporary`||True if this is a temporary asset||Boolean||Optional, defaults to False||
+||`Public`||True if this asset is publicly accessible (without authorization)||Boolean||Optional, defaults to True||
 
 {{{
 POST /assets/ HTTP/1.1
