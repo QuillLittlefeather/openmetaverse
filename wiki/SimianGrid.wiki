@@ -1,0 +1,25 @@
+#summary An overview of the SimianGrid project, a set of PHP services for virtual worlds.
+#labels Featured,Phase-Design
+
+= Introduction =
+
+Add your content here.
+
+
+= Architecture =
+
+[http://openmetaverse.googlecode.com/svn/wiki/simiangrid-architecture.png]
+
+SimianGrid follows a three tier (data, logic, presentation) architecture with the logic tier split into two levels for internal and external access levels.
+
+== Data Tier ==
+
+The data tier holds data for the entire system on database and file servers. Any persistent state must be held in the data tier to allow independent scalability and replication.
+
+== Logic Tier ==
+
+There are three parts of the logic tier: core web services, external web services, and capabilities. The core web services are an exclusive thin wrapper API for the data tier. All data reads and writes must come through the core web services as an authorized request (with the exception of public asset fetching). The external web services present a wide range of service endpoints with varying security requirements and data formats. Some are publicly accessible, many require a form of authorization. Multiple protocols may be supported in the external web services to allow compatibility with a variety of application protocols. Capability resources act as authorization proxies to allow access to protected web services.
+
+== Presentation Tier ==
+
+Virtual world simulators and the frontend website make up the presentation tier. Connections may be made to capabilities, external web services, or directly to core web services depending on the trust level of the simulator or frontend.
