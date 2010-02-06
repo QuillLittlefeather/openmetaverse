@@ -21,7 +21,7 @@ RequestMethod=AddCapability
 
 || *Parameter* || *Description* || *Type* ||
 ||`Success`||True if a CapabilityID was returned, False if a Message was returned||Boolean||
-||`CapabilityID`||UUID of the newly created capability||UUID||
+||`CapabilityID`||UUID of the created or updated capability||UUID||
 ||`Message`||Error message||String||
 
 Success:
