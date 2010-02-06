@@ -1,11 +1,6 @@
 #summary An overview of the SimianGrid project, a set of PHP services for virtual worlds.
 #labels Featured,Phase-Design
 
-= Introduction =
-
-Add your content here.
-
-
 = Architecture =
 
 [http://openmetaverse.googlecode.com/svn/wiki/simiangrid-architecture.png]
