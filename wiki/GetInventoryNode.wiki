@@ -9,6 +9,7 @@
 ||`OwnerID`||UUID of the item or folder owner||UUID||Yes||
 ||`IncludeFolders`||If true and ItemID is a folder, include child items||Boolean||Optional, defaults to TRUE||
 ||`IncludeItems`||If true and ItemID is a folder, include child folders||Boolean||Optional, defaults to TRUE||
+||`ChildrenOnly`||If true, only this node and direct descendants are fetched||Boolean||Optional, defaults to TRUE||
 
 {{{
 RequestMethod=GetInventoryItem
