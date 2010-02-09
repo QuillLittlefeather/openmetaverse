@@ -5,7 +5,10 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetSession||String||Yes||
-||`SessionID`||UUID of the session to request||UUID||Optional||
+||`SessionID`||UUID of the session to request||UUID||Optional^1^||
+||`UserID`||UUID of the user account to check for a session||UUID||Optional^1^||
+
+  * ^1^Either `SessionID` or `UserID` must be specified
 
 {{{
 RequestMethod=GetSession
