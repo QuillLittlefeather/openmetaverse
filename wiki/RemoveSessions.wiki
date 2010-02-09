@@ -5,14 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||RemoveSessions||String||Yes||
-||`UserID`||UUID of the user to remove all sessions for||UUID||Optional^1^||
-||`SceneID`||Remove all sessions currently residing in this scene||UUID||Optional^1^||
-
-  * ^1^Either UserID or SceneID must be specified
+||`SceneID`||Remove all sessions currently residing in this scene||UUID||Yes||
 
 {{{
 RequestMethod=RemoveSessions
-&UserID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
+&SceneID=efb00dbb-d4ab-46dc-aebc-4ba83288c3c0
 }}}
 
 = Response Format =
