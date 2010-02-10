@@ -5,7 +5,7 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`AssetID`||UUID of the asset||UUID||Optional||
-||`CreatorID`||UUID of the asset creator||UUID||Yes||
+||`CreatorID`||UUID of the asset creator||UUID||Optional, defaults to UUID.Zero||
 ||`Asset`||Raw asset data||Binary||Yes||
 ||`Temporary`||True if this is a temporary asset||Boolean||Optional, defaults to False||
 ||`Public`||True if this asset is publicly accessible (without authorization)||Boolean||Optional, defaults to True||
