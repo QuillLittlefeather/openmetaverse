@@ -35,7 +35,7 @@ Content-Disposition: form-data; name="Temporary"
 --AaB03x
 }}}
 
-  * If AssetID is specified and the asset already exists, the old asset will be replaced
+  * If AssetID is specified and the asset already exists, the old asset will be replaced. This will only replace the asset data, it does not modify content-type or any other fields
   * Only one asset upload is allowed per request
 
 = Response Format =
