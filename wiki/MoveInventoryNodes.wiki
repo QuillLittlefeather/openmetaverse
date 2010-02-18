@@ -7,7 +7,7 @@
 ||`RequestMethod`||MoveInventoryNodes||String||Yes||
 ||`OwnerID`||UUID of the inventory owner||UUID||Yes||
 ||`FolderID`||UUID of the target folder||UUID||Yes||
-||`Items`||Comma-separated list of UUIDs for the inventory nodes to move||String||Yes||
+||`Items`||Comma-separated list containing UUIDs of the inventory nodes to move||String||Yes||
 
 {{{
 RequestMethod=MoveInventoryNodes
