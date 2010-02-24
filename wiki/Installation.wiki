@@ -1,4 +1,4 @@
-#summary Installing, configuring, and running !SimianGrid and !SimianGridFrontend.
+#summary Installing, configuring, and running SimianGrid and SimianGridFrontend.
 #labels Phase-Deploy
 
 = Installation =
