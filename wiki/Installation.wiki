@@ -26,7 +26,7 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   * You will need a recent version of MySQL (at least 5.1). Import the `sql/database.mysql.sql` database definition for the Simian database to MySQL.
   * TODO: We need a test script to verify the grid services are working.
 
-== SimianGridFrontend ==
+== !SimianGridFrontend ==
 
 SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world logins. Currently, SimianGridFrontend is required to import the default asset set into SimianGrid.
 
