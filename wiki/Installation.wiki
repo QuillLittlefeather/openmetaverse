@@ -12,7 +12,7 @@ svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
 Inside the `simiangrid` folder you will find three more folders: `licenses`, `OpenSim`, and `Simian`.
 
   * `licenses` contains the license agreements for all of the source code and dependencies. !SimianGrid and related Open Metaverse Foundation projects are released under a three clause BSD license.
-  * `OpenSim` contains an [http://www.opensimulator.org/ OpenSimulator] addon that connects OpenSim regions to a !SimianGrid backend. You will need to copy the addon module into your OpenSim addon-modules folder and rebuild. Complete build and installation instructions for this module can be found in the README.txt file in the `OpenSim/addon-modules/SimianGrid/` folder.
+  * `OpenSim` contains an [http://www.opensimulator.org/ OpenSimulator] addon that connects !OpenSim regions to a !SimianGrid backend. You will need to copy the addon module into your !OpenSim addon-modules folder and rebuild. Complete build and installation instructions for this module can be found in the README.txt file in the `OpenSim/addon-modules/SimianGrid/` folder.
   * `Simian` contains two projects, `Grid` and `GridFrontend` for !SimianGrid and !SimianGridFrontend, respectively.
 
 == SimianGrid ==
