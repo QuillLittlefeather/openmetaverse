@@ -1,9 +1,9 @@
-#summary Installing, configuring, and running SimianGrid and SimianGridFrontend.
+#summary Installing, configuring, and running !SimianGrid and !SimianGridFrontend.
 #labels Phase-Deploy
 
 = Installation =
 
-Until SimianGrid has its first versioned released, you will need to check the code out of the SVN source repository. Use this command to check out the project source code into a folder named `simiangrid`:
+Until !SimianGrid has its first versioned released, you will need to check the code out of the SVN source repository. Use this command to check out the project source code into a folder named `simiangrid`:
 
 {{{
 svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
@@ -11,36 +11,36 @@ svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
 
 Inside the `simiangrid` folder you will find three more folders: `licenses`, `OpenSim`, and `Simian`.
 
-  * `licenses` contains the license agreements for all of the source code and dependencies. SimianGrid and related Open Metaverse Foundation projects are released under a three clause BSD license.
-  * `OpenSim` contains an [http://www.opensimulator.org/ OpenSimulator] addon that connects OpenSim regions to a SimianGrid backend. You will need to copy the addon module into your OpenSim addon-modules folder and rebuild. Complete build and installation instructions for this module can be found in the README.txt file in the `OpenSim/addon-modules/SimianGrid/` folder.
-  * `Simian` contains two projects, `Grid` and `GridFrontend` for SimianGrid and SimianGridFrontend, respectively.
+  * `licenses` contains the license agreements for all of the source code and dependencies. !SimianGrid and related Open Metaverse Foundation projects are released under a three clause BSD license.
+  * `OpenSim` contains an [http://www.opensimulator.org/ OpenSimulator] addon that connects OpenSim regions to a !SimianGrid backend. You will need to copy the addon module into your OpenSim addon-modules folder and rebuild. Complete build and installation instructions for this module can be found in the README.txt file in the `OpenSim/addon-modules/SimianGrid/` folder.
+  * `Simian` contains two projects, `Grid` and `GridFrontend` for !SimianGrid and !SimianGridFrontend, respectively.
 
 == SimianGrid ==
 
-SimianGrid is the core set of web services that provide a persistence layer for your world.
+!SimianGrid is the core set of web services that provide a persistence layer for your world.
 
-  * Copy the contents of the `Grid` folder to a directory accessible by your webserver. SimianGrid has only been tested with Apache2 and PHP 5.3.
-  * (Optional) Check to make sure the .htaccess folder was copied over and that it has the correct permissions (`chmod 644 .htaccess` should do the trick). This will make friendly URLs for each of the services, such as `/assets/` instead of AssetService.php and `/grid/`, `/users/`, `/inventory/` instead of GridService.php.
-  * Copy `services.ini.dist` to `services.ini` and modify to match your configuration. You will need to edit the [Database] section, and the `server_url` in the various sections to the absolute URL of each service. If you are using the .htaccess file the defaults may be fine, otherwise you will need to use AssetService.php for assets and GridService.php for the other services.
+  * Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache2 and PHP 5.3.
+  * (Optional) Check to make sure the .htaccess folder was copied over and that it has the correct permissions (`chmod 644 .htaccess` should do the trick). This will make friendly URLs for each of the services, such as `/assets/` instead of !AssetService.php and `/grid/`, `/users/`, `/inventory/` instead of !GridService.php.
+  * Copy `services.ini.dist` to `services.ini` and modify to match your configuration. You will need to edit the `[Database]` section, and the `server_url` in the various sections to the absolute URL of each service. If you are using the .htaccess file the defaults may be fine, otherwise you will need to use !AssetService.php for assets and !GridService.php for the other services.
   * Make sure the web server has write access to the folder where the grid services were installed. Alternatively, you can change the logging directory in `services.ini` and/or create `services.log`, `debug.log`, and `exception.log` files that the web server has write access to.
   * You will need a recent version of MySQL (at least 5.1). Import the `sql/database.mysql.sql` database definition for the Simian database to MySQL.
   * TODO: We need a test script to verify the grid services are working.
 
 == !SimianGridFrontend ==
 
-SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world logins. Currently, SimianGridFrontend is required to import the default asset set into SimianGrid.
+!SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world login. Currently, !SimianGridFrontend is required to import the default asset set into !SimianGrid.
 
-  * Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. SimianGridFrontend has only been tested with Apache2 and PHP 5.3.
-  * Go into the `application/config` folder and modify configuration options to fit your setup. You should only need to modify `config.php`, `database.php`, and `dx_auth.php` files. Make sure `$config['default_asset_folder']` points at the correct path for the `default_assets` folder that ships with SimianGrid.
+  * Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. !SimianGridFrontend has only been tested with Apache2 and PHP 5.3.
+  * Go into the `application/config` folder and modify configuration options to fit your setup. You should only need to modify `config.php`, `database.php`, and `dx_auth.php` files. Make sure `$config['default_asset_folder']` points at the correct path for the `default_assets` folder that ships with !SimianGrid.
   * NOTE: As of this writing, the CAPTCHA system is not working on some installations. You can disable it by setting `$config['DX_captcha_registration']` to FALSE until this issue can be debugged further. If your PHP installation is not properly configured for sending mail, make sure to disable `$config['DX_email_activation']` and `$config['DX_email_account_details']`.
-  * Import the `schema.sql` table definitions. You can import these into the Simian database created for SimianGrid or another database.
-  * Go to the starting page for SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
-  * Run the import_assets script. If youare SimianGridFrontend homepage is at http://www.mygrid.com/frontend/index.php, the import_assets script is at http://www.mygrid.com/frontend/index.php/home/import_assets. If everything worked, you should see several messages about imported assets.
+  * Import the `schema.sql` table definitions. You can import these into the Simian database created for !SimianGrid or another database.
+  * Go to the starting page for !SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
+  * Run the import_assets script. If your !SimianGridFrontend homepage is at http://www.mygrid.com/frontend/index.php, the import_assets script is at http://www.mygrid.com/frontend/index.php/home/import_assets. If everything worked, you should see several messages about imported assets.
 
 == Running ==
 
-  * Once you have compiled OpenSim with the SimianGrid addon and modified the SimianGrid.ini file to match your installation, you should be able to start one or more OpenSim regions that will register themselves with the grid service.
-  * You can now login with an OpenSim-compatible viewer using the login.php script. If you installed SimianGrid at http://www.mygrid.com/, launch your viewer with:
+  * Once you have compiled OpenSim with the !SimianGrid addon and modified the !SimianGrid.ini file to match your installation, you should be able to start one or more OpenSim regions that will register themselves with the grid service.
+  * You can now login with an OpenSim-compatible viewer using the login.php script. If you installed !SimianGrid at http://www.mygrid.com/, launch your viewer with:
 
 {{{
 -loginuri http://www.mygrid.com/login/login.php
