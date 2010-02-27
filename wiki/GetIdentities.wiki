@@ -5,7 +5,10 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetIdentities||String||Yes||
-||`UserID`||UUID of the user to fetch identities for||UUID||Yes||
+||`UserID`||UUID of the user to fetch identities for||UUID||Optional^1^||
+||`Identifier`||Return all identities with this identifier||String||Optional^1^||
+
+  * ^1^Either `UserID` or `Identifier` must be specified
 
 {{{
 RequestMethod=GetIdentities
@@ -25,6 +28,7 @@ RequestMethod=GetIdentities
 ||`Identifier`||Identifier, for example a login name||String||
 ||`Credential`||Credential, for example a hashed password||String||
 ||`Type`||Identity type, such as "md5hash"||String||
+||`UserID`||UUID of the user account this identity maps to||UUID||
 ||`Enabled`||True if this identity is enabled, otherwise false||Boolean||
 
 Success:
@@ -38,7 +42,8 @@ Success:
             "Identifier":"jradford",
             "Credential":"$1$5f4dcc3b5aa765d61d8327deb882cf99",
             "Type":"md5hash",
-            "Enabled":true,
+            "UserID":"9ffd5a95-b8bd-4d91-bbed-ded4c80ba151",
+            "Enabled":true
         }
     ]
 }
