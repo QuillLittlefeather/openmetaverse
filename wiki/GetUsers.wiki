@@ -26,6 +26,7 @@ RequestMethod=GetUsers
 ||`UserID`||UUID for the user account||UUID||
 ||`Name`||Account name||String||
 ||`Email`||Account e-mail address||String||
+||`AccessLevel`||0-255 value indicating the access level of this user||Integer||
 || *`Variable Fields`* ||Free form key value pairs||`*`||
 
 Success:
