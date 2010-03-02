@@ -30,6 +30,7 @@ RequestMethod=GetUser
 ||`UserID`||UUID for the user account||UUID||
 ||`Name`||Account name||String||
 ||`Email`||Account e-mail address||String||
+||`AccessLevel`||0-255 value indicating the access level of this user||Integer||
 || *`Variable Fields`* ||Free form key value pairs. See AddUserData for a list of common user data fields||`*`||
 
 Success:
@@ -42,6 +43,7 @@ Success:
         "UserID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
         "Name":"John Doe",
         "Email":"john.doe@email.com",
+        "AccessLevel":0,
         "CreationDate":"1261042614",
         "LastLoginDate":"1264728529",
         "HomeLocation":"http://examplegrid.com/scenes/Homeland/128/128/25",
