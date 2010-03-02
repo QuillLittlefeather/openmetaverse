@@ -1,4 +1,4 @@
-#summary Returns user account data for accounts matching search criteria.
+#summary Returns partial user account data for accounts matching search criteria.
 #labels Protocol-User
 
 = Request Format =
@@ -27,7 +27,8 @@ RequestMethod=GetUsers
 ||`Name`||Account name||String||
 ||`Email`||Account e-mail address||String||
 ||`AccessLevel`||0-255 value indicating the access level of this user||Integer||
-|| *`Variable Fields`* ||Free form key value pairs||`*`||
+
+  * Note that this does not return all metadata attached to an account like GetUser. Only the primary user account details are returned for each match.
 
 Success:
 
@@ -40,10 +41,7 @@ Success:
             "UserID":"efb00dbb-d4ab-46dc-aebc-4ba83288c3c0",
             "Name":"John Doe",
             "Email":"john.doe@email.com",
-            "CreationDate":"1261042614",
-            "LastLoginDate":"1264728529",
-            "HomeLocation":"http://examplegrid.com/scenes/Homeland/128/128/25",
-            "LastLocation":"http://examplegrid.com/scenes/BraveNewWorld/53/97/23"
+            "AccessLevel":0
         }
     ]
 }
