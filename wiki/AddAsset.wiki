@@ -43,7 +43,7 @@ Content-Disposition: form-data; name="Temporary"
 || *Parameter* || *Description* || *Type* ||
 ||`Success`||True if an AssetID was returned, False if a Message was returned||Boolean||
 ||`AssetID`||UUID of the created or updated asset||UUID||
-||`Status`||One of three values: "Created", "Updated", or "Unchanged"||String||
+||`Status`||One of two values: "Created" or "Updated"||String||
 ||`Message`||Error message||String||
 
 Success:
