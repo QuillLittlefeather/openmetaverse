@@ -7,7 +7,7 @@
 ||`RequestMethod`||AddGeneric||String||Yes||
 ||`OwnerID`||UUID of the user this entry will belong to||UUID||Yes||
 ||`Type`||Describes the type of key/value pair being stored||String||Yes||
-||`Key`||The key to store. The combination of `OwnerID` and `Key` form a unique index||String||Yes||
+||`Key`||The key to store. The combination of `OwnerID`, `Type`, and `Key` form a unique index||String||Yes||
 ||`Value`||A free-form string containing the value to store||String||Yes||
 
 {{{
