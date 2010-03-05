@@ -1,0 +1,57 @@
+#summary Searches for key/value pairs in the generic store.
+#labels Protocol-Generic
+
+= Request Format =
+
+|| *Parameter* || *Description* || *Type* || *Required* ||
+||`RequestMethod`||GetGenerics||String||Yes||
+||`OwnerID`||Owner UUID of the entries to search||String||Yes||
+||`Type`||Type of entries to search for||String||Yes||
+||`Key`||Key to search for||String||Optional||
+
+{{{
+RequestMethod=GetGenerics
+&OwnerID=0dff5920-282a-11df-8a39-0800200c9a66
+&Type=Friend
+}}}
+
+= Response Format =
+
+|| *Parameter* || *Description* || *Type* ||
+||`Success`||True if zero or more entries were returned, False if a Message was returned||Boolean||
+||`Entries`||Array of generic entries that matched the query||Array, see below||
+||`Message`||Error message||String||
+
+== Entries Format ==
+
+|| *Parameter* || *Description* || *Type* ||
+||`Key`||Key name||String||
+||`Value`||Free-form value string||String||
+
+Success:
+
+{{{
+{
+    "Success":true,
+    "Entries":
+    [
+        {
+            "Key":"9d00ff70-282a-11df-8a39-0800200c9a66",
+            "Value":"{\"MyFlags\":0,\"TheirFlags\":38}"
+        },
+        {
+            "Key":"c4bca8c0-282a-11df-8a39-0800200c9a66",
+            "Value":"{\"MyFlags\":0,\"TheirFlags\":0}"
+        },
+    ]
+}
+}}}
+
+Failure:
+
+{{{
+{
+    "Success":false,
+    "Message":"An unknown error occurred"
+}
+}}}
