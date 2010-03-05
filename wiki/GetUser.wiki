@@ -10,7 +10,7 @@
 ||`Email`||E-mail address of the user||String||Optional^1^||
 
   * ^1^At least one search parameter must be given
-  * If a `UserID` of "0000000-0000-0000-0000-000000000000" is given, the user with the highest AccessLevel is returned
+  * If a `UserID` of "0000000-0000-0000-0000-000000000000" is given, the user with the highest `AccessLevel` is returned
 
 {{{
 RequestMethod=GetUser
