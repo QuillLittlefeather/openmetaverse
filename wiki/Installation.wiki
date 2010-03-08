@@ -19,20 +19,19 @@ Inside the `simiangrid` folder you will find three more folders: `licenses`, `Op
 
 !SimianGrid is the core set of web services that provide a persistence layer for your world.
 
-  # Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache2 and PHP 5.3.
-  # (Optional) Check to make sure the .htaccess folder was copied over and that it has the correct permissions (`chmod 644 .htaccess` should do the trick). This will make friendly URLs for each of the services, such as `/assets/` instead of !AssetService.php and `/grid/`, `/users/`, `/inventory/` instead of !GridService.php.
-  # Modify `services.ini` to match your configuration. You will need to edit the `[Database]` section with your MySQL information. The `server_url` in each grid service section needs to be set to the absolute URL of each service.
+  # Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache and PHP 5.3.
+  # Modify `config/config.php` to match your configuration. The config file contains comments describing what each setting does.
   # You will need a recent version of MySQL (at least 5.1). Import the `sql/database.mysql.sql` database definition for the Simian database to MySQL.
-  # TODO: We need a test script to verify the grid services are working.
+  # Import `sql/default_assets.sql` to install the default asset set.
+  # Visit the URL that SimianGrid is installed at. If everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
 
 == !SimianGridFrontend ==
 
 !SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world login. Currently, !SimianGridFrontend is required to import the default asset set into !SimianGrid.
 
-  # Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. !SimianGridFrontend has only been tested with Apache2 and PHP 5.3.
+  # Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. !SimianGridFrontend has only been tested with Apache and PHP 5.3.
   # Go into the `application/config` folder and modify configuration options to fit your setup. You should only need to modify `config.php` and `database.php`. Make sure `$config['default_asset_folder']` points at the correct path for the `default_assets` folder that ships with !SimianGrid.
   # Import the `schema.sql` table definitions. You can import these into the Simian database created for !SimianGrid or another database.
-  # Run the import_assets script. If your !SimianGridFrontend homepage is at `http://www.mygrid.com/frontend/index.php`, the import_assets script is at `http://www.mygrid.com/frontend/index.php/home/import_assets`. If everything worked, you should see several messages about imported assets.
   # Go to the starting page for !SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
 
 == Running with !OpenSim ==
@@ -41,5 +40,5 @@ Inside the `simiangrid` folder you will find three more folders: `licenses`, `Op
   # You can now login with an !OpenSim-compatible viewer using the login.php script. If you installed !SimianGrid at `http://www.mygrid.com/`, launch your viewer with:
 
 {{{
--loginuri http://www.mygrid.com/login/login.php
+-loginuri http://www.mygrid.com/login/
 }}}
