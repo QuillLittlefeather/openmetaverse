@@ -38,7 +38,6 @@ Returns an array containing either items, folders, or both depending on the para
 ||`CreationDate`||UTC timestamp this folder was created||Integer||
 ||`ContentType`||Preferred content type for the folder. Default is application/octet-stream||ContentType||
 ||`ExtraData`||Free-form JSON data associated with this folder||JSON||
-||`ChildCount`||Total number of children in this folder||Integer||
 ||`Version`||Version number of the folder, incremented each time children are added or removed||Integer||
 
 == Inventory Item Format ==
