@@ -37,11 +37,11 @@ Success:
     [
         {
             "Key":"9d00ff70-282a-11df-8a39-0800200c9a66",
-            "Value":"{\"MyFlags\":0,\"TheirFlags\":38}"
+            "Value":"38"
         },
         {
             "Key":"c4bca8c0-282a-11df-8a39-0800200c9a66",
-            "Value":"{\"MyFlags\":0,\"TheirFlags\":0}"
+            "Value":"0"
         },
     ]
 }
