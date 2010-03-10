@@ -12,6 +12,7 @@
 ||`Name`||Name of the item||String||Yes||
 ||`Description`||Description of the item||String||Optional, defaults to an empty string||
 ||`CreatorID`||UUID of the item creator, if different from the asset creator||UUID||Optional, defaults to the asset creator||
+||`ContentType`||MIME type of the asset this item points to||Optional, defaults to the asset content type||
 ||`ExtraData`||Free form JSON data associated with this item||JSON||Optional||
 
   * `ItemID` is only required for updating an existing item
