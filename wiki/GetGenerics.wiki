@@ -27,6 +27,7 @@ RequestMethod=GetGenerics
 == Entries Format ==
 
 || *Parameter* || *Description* || *Type* ||
+||`OwnerID`||Owner UUID of the entry||UUID||
 ||`Key`||Key name||String||
 ||`Value`||Free-form value string||String||
 
@@ -38,10 +39,12 @@ Success:
     "Entries":
     [
         {
+            "OwnerID":"0dff5920-282a-11df-8a39-0800200c9a66",
             "Key":"9d00ff70-282a-11df-8a39-0800200c9a66",
             "Value":"38"
         },
         {
+            "OwnerID":"0dff5920-282a-11df-8a39-0800200c9a66",
             "Key":"c4bca8c0-282a-11df-8a39-0800200c9a66",
             "Value":"0"
         },
