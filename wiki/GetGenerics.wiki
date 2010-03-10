@@ -5,9 +5,11 @@
 
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||GetGenerics||String||Yes||
-||`OwnerID`||Owner UUID of the entries to search||String||Yes||
+||`OwnerID`||Owner UUID of the entries to search||String||Optional^1^||
 ||`Type`||Type of entries to search for||String||Yes||
-||`Key`||Key to search for||String||Optional||
+||`Key`||Key to search for||String||Optional^1^||
+
+  * ^1^Either `OwnerID` or `Key` must be given
 
 {{{
 RequestMethod=GetGenerics
