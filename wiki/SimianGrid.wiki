@@ -33,4 +33,4 @@ The !OpenSim project provides a set of HTTP-based grid services written in C# th
 
 Aside from architecture and feature differences, !SimianGrid and ROBUST provide a similar model of a virtual world grid and expose common services. The diagrams below show the common grid model that each set of services implement.
 
-<img src="http://openmetaverse.googlecode.com/svn/wiki/simiangrid-services-01.png" align="left" /><img src="http://openmetaverse.googlecode.com/svn/wiki/robust-services-01.png" align="left" />
+<a href="http://openmetaverse.googlecode.com/svn/wiki/simiangrid-services-01.png"><img src="http://openmetaverse.googlecode.com/svn/wiki/simiangrid-services-01.png" width=364 height=383 align="left" /></a><a href="http://openmetaverse.googlecode.com/svn/wiki/robust-services-01.png"><img src="http://openmetaverse.googlecode.com/svn/wiki/robust-services-01.png" width=364 height=383 align="left" /></a>
