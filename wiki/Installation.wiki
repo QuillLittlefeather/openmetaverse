@@ -15,10 +15,12 @@ Inside the `simiangrid` folder you will find three more folders: `licenses`, `Op
   * `OpenSim` contains an [http://www.opensimulator.org/ OpenSimulator] addon that connects !OpenSim regions to a !SimianGrid backend. You will need to copy the addon module into your !OpenSim addon-modules folder and rebuild. Complete build and installation instructions for this module can be found in the README.txt file in the `OpenSim/addon-modules/SimianGrid/` folder.
   * `Simian` contains two projects, `Grid` and `GridFrontend` for !SimianGrid and !SimianGridFrontend, respectively.
 
-== SimianGrid ==
+== !SimianGrid ==
 
-!SimianGrid is the core set of web services that provide a persistence layer for your world.
+SimianGrid is the core set of web services that provide a persistence layer for your world.
 
+  # Make sure you have the all of the prerequisites installed. On Ubuntu, this command will install everything you need:
+  `apt-get install apache2 php5 php5-mysql mysql-server php5-curl php5-xmlrpc`
   # Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache and PHP 5.3.
   # Modify `config/config.php` to match your configuration. The config file contains comments describing what each setting does.
   # You will need a recent version of MySQL (at least 5.1). Import the `sql/database.mysql.sql` database definition for the Simian database to MySQL.
