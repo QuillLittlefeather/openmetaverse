@@ -9,7 +9,7 @@ Until !SimianGrid has its first versioned released, you will need to check the c
 svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
 }}}
 
-  * `Simian` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (!SimianGridWebDAV)
+  * `Simian` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV)
 
 == !SimianGrid ==
 
