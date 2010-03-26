@@ -35,7 +35,7 @@ SimianGrid is the core set of web services that provide a persistence layer for 
 == Running with !OpenSim ==
 
   # Once you have configured your !OpenSim.ini file to use the !SimianGrid.ini include, and modified your !GridCommon.ini file with the !SimianGrid service URLs (look at !SimianGrid.ini for example URLs), you should be able to start one or more !OpenSim regions that will register themselves with the grid service.
-  # You can now login with an !OpenSim-compatible viewer using the login.php script. If you installed !SimianGrid at `http://www.mygrid.com/`, launch your viewer with:
+  # You can now login with an !OpenSim-compatible viewer. If you installed !SimianGrid at `http://www.mygrid.com/`, launch your viewer with:
 
 {{{
 -loginuri http://www.mygrid.com/login/
