@@ -3,7 +3,7 @@
 
 = Introduction =
 
-Simian started out as an experiment in virtual world simulation software before growing into an umbrella of projects related to virtual world hosting and simulation. SimianGrid is a set of PHP web services that provide the backend for a grid.
+Simian started out as an experiment in virtual world simulation software before growing into an umbrella of projects related to virtual world hosting and simulation. SimianGrid is a set of PHP web services that provide the central backend for a virtual world.
 
 = Architecture =
 
