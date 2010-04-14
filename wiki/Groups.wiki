@@ -27,15 +27,15 @@ Group Role
     * Description (string) [Can't decide if this should be in extra data]
     * Title (string) [Can't decide if this should be in extra data]
 
-Group Permissions
-  * GroupPermissionID
+Permissions
+  * PermissionID
   * Name
   * ExtraData (json/osdmap format)
     * LLGroupPermissionMask (long)
 
-Group Role Permission
+Permission
   * GroupRoleID
-  * GroupPermissionID
+  * PermissionID
 
 Group Role Member
   * GroupRoleID
@@ -68,6 +68,18 @@ Group Invite
   * GroupRoleID
   * MemberID
   * TMStamp (int) [unix timestamp]
+
+=Group API=
+Get/Add Group (GroupID)
+Get/Add Group Member ([GroupID], [MemberID])
+Get/Add Group Role ([GroupID],[RoleID])
+Get/Add Group Permission (PermissionID)
+Get/Add Group Role Permission (RoleID)
+Get/Add Group Role Member (RoleID)
+
+
+
+
 
 =AddGroup=
 
@@ -110,4 +122,3 @@ Failure:
     "Message":"Invalid GroupID"
 }
 }}}
-
