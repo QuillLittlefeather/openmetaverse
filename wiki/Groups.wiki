@@ -69,13 +69,17 @@ Group Invite
   * MemberID
   * TMStamp (int) [unix timestamp]
 
+==Extra Data==
+
+Should the various LL/SL/OpenSim specific extra data be kept one level lower (grouped) by something like Group.["ExtraData"].AsOSDMap().["OpenSim"].AsOSDMap()["Charter"].AsString()
+
 =Group API=
-Get/Add Group (GroupID)
-Get/Add Group Member ([GroupID], [MemberID])
-Get/Add Group Role ([GroupID],[RoleID])
-Get/Add Group Permission (PermissionID)
-Get/Add Group Role Permission (RoleID)
-Get/Add Group Role Member (RoleID)
+  * Get/Add Group (GroupID)
+  * Get/Add Group Member ([GroupID], [MemberID])
+  * Get/Add Group Role ([GroupID],[RoleID])
+  * Get/Add Group Permission (PermissionID)
+  * Get/Add Group Role Permission (RoleID)
+  * Get/Add Group Role Member (RoleID)
 
 
 
