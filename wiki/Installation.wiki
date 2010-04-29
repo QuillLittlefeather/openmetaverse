@@ -30,7 +30,9 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   # Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. !SimianGridFrontend has only been tested with Apache and PHP 5.3.
   # Go into the `application/config` folder and modify configuration options to fit your setup. You should only need to modify `config.php` and `database.php`. Make sure `$config['default_asset_folder']` points at the correct path for the `default_assets` folder that ships with !SimianGrid.
   # Import the `schema.sql` table definitions. You can import these into the Simian database created for !SimianGrid or another database.
+  # If you want to allow users to sign in with OpenID credentials, make sure the directory to which `$config['openid_storepath']` is set in `GridFrontend/application/config/openid.php` is writable by the web server.
   # Go to the starting page for !SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
+
 
 == Running with !OpenSim ==
 
