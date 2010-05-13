@@ -42,3 +42,5 @@ SimianGrid is the core set of web services that provide a persistence layer for 
 {{{
 -loginuri http://www.mygrid.com/login/
 }}}
+
+ (note the trailing slash)
