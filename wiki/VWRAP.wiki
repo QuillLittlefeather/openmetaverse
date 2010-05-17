@@ -73,11 +73,7 @@
                              camera_at: [ real, real, real ],
                              camera_left: [ real, real, real ],
                              camera_up: [ real, real, real ],
-                             draw_distance: real,
-                             head_rotation: [ real, real, real, real ],
-                             body_rotation: [ real, real, real, real ],
-                             ; TODO: TextureEntry?
-                             ; TODO: Animations?
+                             draw_distance: real
                           }
 }}}
 
