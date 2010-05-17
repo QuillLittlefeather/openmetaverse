@@ -69,8 +69,15 @@
                              agent_id: uuid,
                              position: [ real, real, real ],
                              rotation: [ real, real, real, real ],
-                             camera_pos: [ real, real, real ],
-                             ...
+                             camera_center: [ real, real, real ],
+                             camera_at: [ real, real, real ],
+                             camera_left: [ real, real, real ],
+                             camera_up: [ real, real, real ],
+                             draw_distance: real,
+                             head_rotation: [ real, real, real, real ],
+                             body_rotation: [ real, real, real, real ],
+                             ; TODO: TextureEntry?
+                             ; TODO: Animations?
                           }
 }}}
 
@@ -78,7 +85,13 @@
 
 {{{
 %% region/online -> {
-                       ...
+                       region_id: uuid,
+                       region_name: string,
+                       region_x: int,
+                       region_y: int,
+                       region_seed_capability: uri,
+                       sim_host: string,
+                       sim_port: int
                     }
 }}}
 
@@ -86,6 +99,6 @@
 
 {{{
 %% region/offline -> {
-                        ...
+                        region_id: uuid
                      }
 }}}
