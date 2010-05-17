@@ -12,7 +12,13 @@
  
 ; success 
 &resp = {
-           capabilities: [ rez_avatar/request: uri ]
+           capabilities:
+           [
+              rez_avatar/request: uri,
+              child_avatar/update: uri,
+              region/online: uri,
+              region/offline: uri
+           ]
         }
 
 ; error
