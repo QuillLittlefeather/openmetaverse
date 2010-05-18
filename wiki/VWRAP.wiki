@@ -85,7 +85,7 @@
                        region_name: string,
                        region_x: int,
                        region_y: int,
-                       region_seed_capability: uri,
+                       public_region_seed_capability: uri,
                        sim_host: string,
                        sim_port: int
                     }
