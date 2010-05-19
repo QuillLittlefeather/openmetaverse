@@ -38,7 +38,7 @@
                             first_name: string,
                             last_name: string,
                             position: [ real, real, real ],             ; optional
-                            identified: bool,
+                            access_level: integer,
                             child: bool
                          }
 
