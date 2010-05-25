@@ -39,8 +39,7 @@
                             last_name: string,
                             position: [ real, real, real ],             ; optional
                             access_level: integer,
-                            child: bool,
-                            rez_avatar/complete: uri
+                            child: bool
                          }
 
  ; successful response
@@ -61,15 +60,6 @@
                             connect: false,
                             message: string
                          }
-}}}
-
-===Rez Avatar Complete===
-
-{{{
-%% rez_avatar/complete -> {
-                             agent_id: uuid,
-                             region_id: uuid
-                          }
 }}}
 
 ===Child Avatar Update===
