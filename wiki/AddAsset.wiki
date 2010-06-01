@@ -64,5 +64,3 @@ Failure:
     "Message":"Content type not allowed"
 }
 }}}
-
-== Response Codes ==
