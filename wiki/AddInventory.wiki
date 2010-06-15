@@ -6,7 +6,7 @@
 || *Parameter* || *Description* || *Type* || *Required* ||
 ||`RequestMethod`||AddInventory||String||Yes||
 ||`OwnerID`||UUID of the user this inventory will belong to||UUID||Yes||
-||`AvatarType`||String identifier of the template avatar inventory to clone, defaults to "DefaultAvatar"||String||Optional||
+||`AvatarType`||String identifier of the template avatar inventory to clone, defaults to "!DefaultAvatar"||String||Optional||
 
 {{{
 RequestMethod=AddInventory
