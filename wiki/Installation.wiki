@@ -18,10 +18,10 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   # Make sure you have the all of the prerequisites installed.  Some examples which will install everything you need:
 
   _Ubuntu_:
-    `apt-get install apache2 php5 php5-mysql php5-curl php5-xmlrpc mysql-server`
+    `apt-get install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql-server`
 
   _OpenSUSE_:
-    `zypper install apache2 php5 php5-mysql php5-curl php5-xmlrpc mysql`
+    `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql`
 
   # Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache and PHP 5.3.
   # Modify `config/config.php` to match your configuration. The config file contains comments describing what each setting does.
