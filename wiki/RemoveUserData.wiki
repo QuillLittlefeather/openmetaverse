@@ -1,4 +1,5 @@
 #summary Remove user account information.
+#labels Protocol-User
 
 = Request Format =
 
