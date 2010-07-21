@@ -1,0 +1,8 @@
+#summary Ideas and thoughts on an authentication implementation
+
+= Introduction =
+
+Use the comments function to add and discuss authentication
+
+
+= Details =
