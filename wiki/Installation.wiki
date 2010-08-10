@@ -49,4 +49,4 @@ SimianGrid is the core set of web services that provide a persistence layer for 
 -loginuri http://www.mygrid.com/login/
 }}}
 
- (note the trailing slash)
+ (note the trailing slash). You may need to append index.php to the end of the loginuri if your web server is not configured to serve up php files by default.
