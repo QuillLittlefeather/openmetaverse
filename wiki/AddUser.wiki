@@ -8,7 +8,7 @@
 ||`UserID`||UUID of the user to create or update||UUID||Yes||
 ||`Name`||Account name||String||Yes||
 ||`Email`||E-mail address associated with this account||String||Yes||
-||`AccessLevel`||Value from 0-255 indicating the access level of this account (higher implies more access)||Integer||Optional, defaults to 0||
+||`AccessLevel`||Value from 0-255 indicating the access level of this account (higher implies more access). More detail on the AccessLevel page||Integer||Optional, defaults to 0||
 
 {{{
 RequestMethod=AddUser
