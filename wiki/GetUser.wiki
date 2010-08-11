@@ -30,7 +30,7 @@ RequestMethod=GetUser
 ||`UserID`||UUID for the user account||UUID||
 ||`Name`||Account name||String||
 ||`Email`||Account e-mail address||String||
-||`AccessLevel`||0-255 value indicating the access level of this user||Integer||
+||`AccessLevel`||0-255 value indicating the access level of this user. Described in more detail on the AccessLevel page||Integer||
 || *`Variable Fields`* ||Free form key value pairs. See AddUserData for a list of common user data fields||`*`||
 
 Success:
