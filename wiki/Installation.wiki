@@ -9,7 +9,9 @@ Until !SimianGrid has its first versioned released, you will need to check the c
 svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
 }}}
 
-  * `Simian` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV)
+Copy the Simian subdirectoy somewhere web-accessible. 
+
+`Simian` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
 
 == !SimianGrid ==
 
@@ -23,20 +25,16 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   _OpenSUSE_:
     `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql`
 
-  # Copy the contents of the `Grid` folder to a directory accessible by your webserver. !SimianGrid has only been tested with Apache and PHP 5.3.
-  # Modify `config/config.php` to match your configuration. The config file contains comments describing what each setting does.
-  # You will need a recent version of MySQL (at least 5.1). Import the `sql/database.mysql.sql` database definition for the Simian database to MySQL.
-  # Import `sql/default_assets.sql` to install the default asset set.
+  # Visit Grid/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
+# After running the installer, you may wish to remove write permissions from the config files.
   # Visit the URL that SimianGrid is installed at. If everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
 
 == !SimianGridFrontend ==
 
 !SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world login. Currently, !SimianGridFrontend is required to import the default asset set into !SimianGrid.
 
-  # Copy the contents of the `GridFrontend` folder to a directory accessible by your webserver. !SimianGridFrontend has only been tested with Apache and PHP 5.3.
-  # Go into the `application/config` folder and modify configuration options to fit your setup. You should only need to modify `config.php` and `database.php`. Make sure `$config['default_asset_folder']` points at the correct path for the `default_assets` folder that ships with !SimianGrid.
-  # Import the `schema.sql` table definitions. You can import these into the Simian database created for !SimianGrid or another database.
-  # If you want to allow users to sign in with OpenID credentials, make sure the directory to which `$config['openid_storepath']` is set in `GridFrontend/application/config/openid.php` is writable by the web server.
+ # Visit GridFrontend/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
+# After running the installer, you may wish to remove write permissions from the config files.
   # Go to the starting page for !SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
 
 
