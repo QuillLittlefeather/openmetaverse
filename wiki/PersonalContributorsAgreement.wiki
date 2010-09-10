@@ -1,0 +1,3 @@
+#summary License agreement for personal contributions, must be filled out by all developers.
+
+<wiki:gadget url="http://openmetaverse.googlecode.com/svn/files/omf_personal_contrib_agreement.xml" width="680" height="700"/>
