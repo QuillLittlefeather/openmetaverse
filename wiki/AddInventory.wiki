@@ -13,6 +13,8 @@ RequestMethod=AddInventory
 &OwnerID=e4709e21-9a3f-4276-b3cc-22224bdf0199
 }}}
 
+  * Note that user inventories will always have a root folder that shares the same UUID as the user. This is a design choice, to optimize away calls to get a user's root inventory folder UUID.
+
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
