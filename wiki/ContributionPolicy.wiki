@@ -3,24 +3,7 @@
 
 = Contribution Policy =
 
-To make sure that we can accept your contributions and continue to distribute Open Metaverse Foundation software under the most free license possible, any contributions need to follow the following licensing conditions:
-
-    * Your contribution is either wholly your own, or if it contains third party materials, they are licensed in a manner compatible with the Open Metaverse Foundation BSD license. If you rely on third party contributions, maintain the original licensing and copyright headers on source code or include a copy of the original license with binaries. We cannot accept any code under the GPL or similar "copyleft" licenses unless there is a specific F/OSS exemption for BSD-licensed projects.
-
-    * You accept whole liability for any contributions you make for inclusion of third party intellectual property, in the jurisdiction of both yourself, and where the servers are located (United States). If you are unsure about the licensing conditions for a piece of source, do not include it and work around it. If you have a problem here, ask the rest of the developers as they may be able to help. 
-
-    * In connection with any Contributions, you agree to fully disclose any other open source projects or non-open source projects that relate to 3-D virtual world technologies, on which you worked and/or whose code you studied for six months prior to the submission of your Contribution, and that are similar to the Contribution or the Work in whole or in part, or are subject to licenses or other contractual restrictions that would preclude their use by the Foundation. You understand and agree that the Foundation reserves the right to decline to accept your Contribution based on the nature of your disclosures as well as any other reason, in the Foundation's sole discretion.
-
-    * You submit your contributions to the repository under the Open Metaverse Foundation BSD license below.
-
-== Documentation ==
-Accurate and descriptive documentation is critical for the long term viability of an open source project. As contributors come and go, projects survive by making it as easy as possible for new developers to understand both high level architectural concepts and low level methods. Use common sense here, from the perspective of a new contributor that is trying to understand your code. Methods that are called from external modules should be documented with their purpose, expected inputs, and expected outputs. Complex or obscure routines should have inline documentation to annotate each step. Replace inline magic numbers with constants and a brief description of what the constant does. All networking protocols must be documented on the wiki.
-
-== Coding Conventions ==
-Another facet of keeping the learning curve low is maintaining readable code. Open Metaverse Foundation projects use a similar coding convention whether they are written in C#, PHP or any other language, although conventions differ slightly for each language and possibly each project. Study the conventions used in a project you are contributing to before submitting a patch or new code. Code that deviates from the standard conventions will need to be cleaned up before applying, slowing down the patching process and possibly requiring a re-submission.
-
-== Maintainers ==
-Although all of the projects hosted here are open source and every approved developer has commit rights to any project or module, a concept of maintainers is loosely enforced to make sure every part of the codebase is receiving adequate attention. Projects and major subsystems of projects have one or more maintainers at any given time who are responsible for reviewing patches, producing unit tests and fixing regressions, and providing support and/or documentation to other developers for their module.
+You may find contribution agreements for both corporate entities and individuals on our home page at http://www.openmetaverse.org/about-open-metaverse-foundation
 
 = Open Metaverse Foundation BSD License =
 
