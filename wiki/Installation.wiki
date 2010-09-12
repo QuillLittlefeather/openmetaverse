@@ -25,6 +25,10 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   _OpenSUSE_:
     `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql`
 
+
+Note: fairly recent linux distros are required, or must otherwise be made to supply php 5.3 and mysql 5.1
+
+
   # Visit Grid/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
 # After running the installer, you may wish to remove write permissions from the config files.
   # Visit the URL that SimianGrid is installed at. If everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
