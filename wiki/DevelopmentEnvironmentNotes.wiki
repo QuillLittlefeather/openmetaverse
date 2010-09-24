@@ -12,7 +12,7 @@ This may or may not be the preferred/ideal development environment, but it's the
 
 After a base installation of Ubuntu Lucid, I installed the repositories package, updated package lists, and upgraded everything.
 
-I then I installed:<br>
+I then installed:<br>
 apache 2.2.14<br>
 php5.3.2<br>
 MariaDB 5.1<br>
