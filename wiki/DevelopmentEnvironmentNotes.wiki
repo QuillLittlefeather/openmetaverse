@@ -1,0 +1,17 @@
+#labels Phase-Implementation
+= *Introduction* =
+
+For now I'll cover briefly what I installed, in no particular order excepting the base ubuntu, which necesarily came first.
+
+Later, as I have more detail, I'll make some notes concerning windows environments.
+
+
+= *Linux Environment Details* =
+
+This may or may not be the preferred/ideal development environment, but it's the one that I have found best satisfies the dependencies.
+
+After a base installation of Ubuntu Lucid, I installed the repositories package, updated package lists, and upgraded everything. Then I installed apache 2.2.14, php5.3.2, MariaDB 5.1, subversion, openssh, and git. I also installed php-cli, but its probably not necesary to the success of the environment. I should probably updgrade everything again, or else install all the forgoing before upgrading.
+
+There is also a fair possibility I need to install some PHP extensions, which is what I will be investigating next.
+
+_Like most such pages, this one is a work in progress - I'll update/edit it as I have information in greater detail._
