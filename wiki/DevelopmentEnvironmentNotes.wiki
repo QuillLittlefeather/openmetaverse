@@ -24,5 +24,11 @@ I also installed php-cli, but its probably not necesary to the success of the en
 
 Also, per the [Installation] instructions, I installed the PHP extensions 'php5-mysql php5-curl php5-gd' and 'php5-xmlrpc'.
 
+Note that in addition to the forgoing, in order to satisfy an unarticulated need for Imagemagick, you will need to install 'php-pear php5-dev' and 'libmagickwand-dev', and then run 'pecl install imagick'. Don't miss the instructions in the last few lines of output from that last command pertaining to adding the imagick extension to php.ini. After that's been done, restart the apache server.
 
+If you are on windows, my best advice is to read this thread:
+
+http://www.php.net/manual/en/imagick.installation.php
+
+pay very close attention to spellings and read it all before you try to follow any instructions, some of the posts are tales of woe.
 _Like most such pages, this one is a work in progress - I'll update/edit it as I have information in greater detail._
