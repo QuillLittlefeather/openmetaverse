@@ -3,15 +3,15 @@
 
 = Installation =
 
-Until !SimianGrid has its first versioned released, you will need to check the code out of the SVN source repository. Use this command to check out the project source code into a folder named `simiangrid`:
+Until !SimianGrid has its first versioned released, you will need to check the code out of the git source repository. Use this command to check out the project source code into a folder named `simiangrid`:
 
 {{{
-svn checkout http://openmetaverse.googlecode.com/svn/trunk/ simiangrid
+git clone http://github.com/openmetaversefoundation/simiangrid.git
 }}}
 
-Copy the Simian subdirectoy somewhere web-accessible. 
+Place this, or a copy of it, somewhere accessible to your webserver. 
 
-`Simian` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
+`SimianGrid` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
 
 == !SimianGrid ==
 
