@@ -13,6 +13,15 @@ Place this, or a copy of it, somewhere accessible to your webserver.
 
 `SimianGrid` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
 
+== MySQL ==
+
+You'll need to set `max_allowed_packet` in your my.cnf; the default value of 1MB is too small to load the default assets.  So set:
+
+   `max_allowed_packet=16M`
+
+in my.cnf.
+
+
 == !SimianGrid ==
 
 SimianGrid is the core set of web services that provide a persistence layer for your world.
