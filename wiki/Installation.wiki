@@ -19,7 +19,7 @@ You'll need to set `max_allowed_packet` in your my.cnf; the default value of 1MB
 
    `max_allowed_packet=16M`
 
-in my.cnf.
+in the [mysqld] section of my.cnf.
 
 
 == !SimianGrid ==
