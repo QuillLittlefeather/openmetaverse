@@ -39,6 +39,7 @@ pay very close attention to spellings and read it all before you try to follow a
 = *Concerning Git and GitHub workflows* =
 
 *this section assumes a certain level of familiarity with git source code revision control software*
+
 Git is complex and powerful software for managing parallel software development timelines.  while it has something of a steep learning curve, getting a basic working knowledge of git is well worth the effort.
 
 Note too that I am a relative novice with git, and that some of these steps may be redundant or unnecessary. If you find a way of improving this workflow, please edit this document to reflect it.
