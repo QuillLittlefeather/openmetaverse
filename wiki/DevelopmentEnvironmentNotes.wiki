@@ -55,6 +55,7 @@ Here is how I currently employ git in conjunction with github in the pursuit of 
 4. change directories to the base of your clone and execute the following git commands (from the github website help):
 
 git remote add upstream git://github.com/openmetaversefoundation/simiangrid.git
+
 git fetch upstream
 
 This sets the OpenMetaverse Foundation's SimianGrid project as the upstream source of your fork. In this workflow, you will manage the master copy of your work locally, and push copies to your github fork to keep your published fork completely up-to-date.
