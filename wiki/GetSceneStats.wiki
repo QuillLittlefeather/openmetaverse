@@ -14,7 +14,7 @@ RequestMethod=GetSceneStats
 
 || *Parameter* || *Description* || *Type* ||
 ||`Success`||True if a !SceneCount was returned, False if a Message was returned||Boolean||
-||`SceneCount`||Total count of user accounts||Integer||
+||`SceneCount`||Total count of scenes||Integer||
 ||`Message`||Error message||String||
 
 
