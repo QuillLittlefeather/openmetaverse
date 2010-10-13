@@ -4,7 +4,7 @@
 = Request Format =
 
 || *Parameter* || *Description* || *Type* || *Required* ||
-||`RequestMethod`||GetUserStats||String||Yes||
+||`RequestMethod`||!GetUserStats||String||Yes||
 
 {{{
 RequestMethod=GetUserStats
@@ -13,7 +13,7 @@ RequestMethod=GetUserStats
 = Response Format =
 
 || *Parameter* || *Description* || *Type* ||
-||`Success`||True if a UserCount was returned, False if a Message was returned||Boolean||
+||`Success`||True if a !UserCount was returned, False if a Message was returned||Boolean||
 ||`UserCount`||Total count of user accounts||Integer||
 ||`Message`||Error message||String||
 
