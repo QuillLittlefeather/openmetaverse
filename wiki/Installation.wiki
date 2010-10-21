@@ -32,7 +32,7 @@ SimianGrid is the core set of web services that provide a persistence layer for 
     `apt-get install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql-server`
 
   _OpenSUSE_:
-    `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql`
+    `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc php5-openssl mysql`
 
 
 Note: fairly recent linux distros are required, or must otherwise be made to supply php 5.3 and mysql 5.1
