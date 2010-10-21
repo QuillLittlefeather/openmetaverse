@@ -61,3 +61,10 @@ Note: fairly recent linux distros are required, or must otherwise be made to sup
 }}}
 
  (note the trailing slash). You may need to append index.php to the end of the loginuri if your web server is not configured to serve up php files by default.
+
+
+== Troubleshooting ==
+
+Problem: Web server logs report "PHP Fatal error:  Call to undefined function openssl_random_pseudo_bytes()".
+
+Solution: Verify you have PHP >= 5.3 installed.  Verify that the OpenSSL extension is enabled for PHP (e.g. `extension=openssl.so` in php.ini), even if you're not using HTTP over SSL/TLS.
