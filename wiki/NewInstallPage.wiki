@@ -17,9 +17,9 @@ Windows has seen successful deployments using both XAMP and manually installed a
 
 == MySQL Tuning ==
 
-You will want to add the following to your MySQL's 'My.cnf'. If the section [mysqld] already exists, just add the max_allowed_packet directive to it:
+You will want to add the following to your MySQL's 'My.cnf'. If the section `[mysqld]` already exists, just add the max_allowed_packet directive to it:
 
-[mysqld]
+`[mysqld]`
    `max_allowed_packet=16M`
 
 
