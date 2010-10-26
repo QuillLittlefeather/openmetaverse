@@ -111,24 +111,48 @@ o The password
 
 The user and group may differ on your linux distribution, but as noted for windows users, the key is to make the document root writable by the web server. This is so that the installer script can write the operational parameters collected by the installer interface into your service configurations. Once installation has been completed, standard operating procedures/best practices can be employed to lock down the system as you would any web service environment.
 
+Depending on the default permissions provided on your system, you may or may not have to adjust permissions on the installer path. If you should have to do so, this is done with the chmod command as follows:
 
-= SimianGrid =
+`chmod -R 0775 /var/www/htdocs`
 
-
-  # Visit Grid/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
-# After running the installer, you may wish to remove write permissions from the config files.
-  # Visit the URL that SimianGrid is installed at. If everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
-
-== SimianGridFrontend ==
-
-!SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world login. Currently, !SimianGridFrontend is required to import the default asset set into !SimianGrid.
-
- # Visit GridFrontend/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
-# After running the installer, you may wish to remove write permissions from the config files.
-  # Go to the starting page for !SimianGridFrontend and verify that it works. Next, try creating a user account and logging in and logging out.
+This will give the webserver the ability to read/write/create/delete anything in it's Document Root; not something one would want to leave as-is in a production environment. Again, once installation has been completed, standard operating procedures/best practices can be employed to lock down the system as you would any web service environment.
 
 
-== Running with !OpenSim ==
+== Running the Installer ==
+
+The installer is launched by visiting a URL with a browser and filling configuration data into a sequence of forms that are presented. It is run once in turn for each service that will be configured. In spite of the generic approach, Simian Grid Services are a bit codependent; at the very least you will need to install first the Grid Service followed by the GridFrontend. GridFrontend is required to load a grid's starter assets. We will cover all three Simian Grid services at a single stroke now.
+
+There are three installer URLs:
+
+http://myserver.com/Grid/install.php
+
+http://myserver.com/GridFrontend/install.php
+
+http://myserver.com/GridWebDAV/install.php
+
+
+They should be visited in roughly that order. Note that GridWebDAV will not be useful until your grid has users with inventories.
+
+These forms will prompt you for all the information generated or recorded in the course of the installation process to this point. Work through each of the simple forms that are presented, supplying this information. Pay particular attention to the base URL.
+
+When you have successfully completed the installation, a `'lockfile'` will be created to let the installer know that it has been successfully run. Should you need to run the installer again, you will need to remove it first. It can be found in the root directory of the service; e.g., /var/www/htdocs/Grid/. You can safely remove this file and  run the installer again to update the configuration at any time.
+
+Note that the installer code automatically updates database schemae on the fly, so is entirely appropriate for purposes of upgrading a previous Simian Grid Services installation.
+
+When successful installation has been completed, your Simian Grid Services should be ready to test and use.
+
+== Testing/Using Simian Grid Services ==
+
+Visit the URL that SimianGrid is installed at. In our example work, it would look something like http://myserver.com/Grid/ -- if everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
+
+Access the Grid Frontend next. It's URL, again according to our example work, would be http://myserver.com/GridFrontend/ -- and if all went well, you should see and OpenMetaverse Foundation-branded dynamic website which will provide you and your grid users ready access to account management and other web-based grid operations infrastructure.
+
+Similarly, GridWebDAV would be accessed via http://myserver.com/GridWebDAV/
+
+note that in the current release, WebDAV support is read-only.
+
+
+ Getting a Simulator Running 
 
   # Once you have configured your !OpenSim.ini file to use the !SimianGrid.ini include, and modified your !GridCommon.ini file with the !SimianGrid service URLs (look at !SimianGrid.ini for example URLs), you should be able to start one or more !OpenSim regions that will register themselves with the grid service.
   # You can now login with an !OpenSim-compatible viewer. If you installed !SimianGrid at `http://www.mygrid.com/`, launch your viewer with:
