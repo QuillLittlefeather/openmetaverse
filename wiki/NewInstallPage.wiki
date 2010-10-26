@@ -1,31 +1,9 @@
-#summary Installing, configuring, and running SimianGrid and SimianGridFrontend.
+#summary Installing, configuring, and running the SimianGrid Services
 
 = Installation =
 
-Until !SimianGrid has its first versioned released, you will need to check the code out of the git source repository. Use this command to check out the project source code into a folder named `simiangrid`:
-
-{{{
-git clone http://github.com/openmetaversefoundation/simiangrid.git
-}}}
-
-Place this, or a copy of it, somewhere accessible to your webserver. 
-
-`SimianGrid` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
-
-== MySQL ==
-
-You'll need to set `max_allowed_packet` in your my.cnf; the default value of 1MB is too small to load the default assets.  So set:
-
-   `max_allowed_packet=16M`
-
-in the `[mysqld]` section of my.cnf.
-
-
-== !SimianGrid ==
-
-SimianGrid is the core set of web services that provide a persistence layer for your world.
-
-  # Make sure you have the all of the prerequisites installed.  Some examples which will install everything you need:
+= A word about dependencies =
+Make sure you have the all of the prerequisites installed. These will vary based on Operating System and Operating System version. Only a few linux distributions have seen deployments; they are listed below with the commands to install their dependencies:
 
   _Debian/Ubuntu_:
     `apt-get install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc mysql-server`
@@ -33,15 +11,69 @@ SimianGrid is the core set of web services that provide a persistence layer for 
   _OpenSUSE_:
     `zypper install apache2 php5 php5-mysql php5-curl php5-gd php5-xmlrpc php5-openssl mysql`
 
-
 Note: fairly recent linux distros are required, or must otherwise be made to supply php 5.3 and mysql 5.1
+
+Windows has seen successful deployments using both XAMP and manually installed apache2/php5/mysql.
+
+== MySQL Tuning ==
+
+You will want to add the following to your MySQL's 'My.cnf'. If the section [mysqld] already exists, just add the max_allowed_packet directive to it:
+
+[mysqld]
+   `max_allowed_packet=16M`
+
+
+
+= Services Overview =
+
+Simian Grid Services currently come in a set of three. These are GridFrontend, Grid, and GridWebDAV. These services provide a grid user account management interface (including a user/grid management interface for those with suitable access), a Grid backend, which provides various services that comprise a grid in the OpenSimulator technology paradigm, including inventory, assets, user accounts, region registration, and others; and finally some limited WebDAV inventory management functionality.
+
+
+= Installation Overview =
+
+In the course of installation, you will address the following basic concerns to get Simian Grid Services up and running on an apache web server.
+
+# Getting the Simian Grid Services
+
+# placing the installer in the apache server path
+
+# Establishing Database and Database Credentials
+
+# Setting Permissions
+
+# Running the installer
+
+# Testing/Using Simian Grid Services
+
+
+== Getting the Simian Grid Services ==
+
+How you get Simian Grid Services will depend on who you are. If you are obtaining it as an end user, you will want to obtain the distribution release package from the OpenMetaverse Foundation website. If you are a  developer, you will need to prepare for git repository use (if you haven't already), and obtain the code from the OpenMetaverse Foundation GitHub site.
+
+The distribution release package can be found at:
+{{{
+http://wheresmyfiles.com/download/me/some/simiangrid.php
+}}}
+
+and the source code repository is at:
+{{{
+git clone http://github.com/openmetaversefoundation/simiangrid.git
+}}}
+
+
+
+Place this, or a copy of it, somewhere accessible to your webserver. 
+
+`SimianGrid` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
+
+== SimianGrid ==
 
 
   # Visit Grid/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
 # After running the installer, you may wish to remove write permissions from the config files.
   # Visit the URL that SimianGrid is installed at. If everything is working correctly it should print out `SimianGrid`. If you receive a blank page or an error, check for a log file in the `logs/` directory or your Apache error log.
 
-== !SimianGridFrontend ==
+== SimianGridFrontend ==
 
 !SimianGridFrontend is a user-facing web portal for your world that provides user creation and account management, grid administration, and web-based world login. Currently, !SimianGridFrontend is required to import the default asset set into !SimianGrid.
 
