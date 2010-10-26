@@ -152,20 +152,15 @@ Similarly, GridWebDAV would be accessed via http://myserver.com/GridWebDAV/
 note that in the current release, WebDAV support is read-only.
 
 
- Getting a Simulator Running 
+ === Getting a Simulator Running ===
+For the present, we will only examine connecting a core opensim region to Simian Grid Services. This is accomplished identically to connecting a core opensim instance to a Robust Grid Services stack, with the exception that the architecture 'Include'ed at the end of `bin/OpenSim.ini` is different: it should include `config-includes/SimianGrid.ini' instead of `config-includes/Grid.ini`, and the format of the URI will be slightly different.
 
-  # Once you have configured your !OpenSim.ini file to use the !SimianGrid.ini include, and modified your !GridCommon.ini file with the !SimianGrid service URLs (look at !SimianGrid.ini for example URLs), you should be able to start one or more !OpenSim regions that will register themselves with the grid service.
-  # You can now login with an !OpenSim-compatible viewer. If you installed !SimianGrid at `http://www.mygrid.com/`, launch your viewer with:
+Once you have configured your `bin/OpenSim.ini` file to use the `config-includes/SimianGrid.ini` include, and modified your `GridCommon.ini` file with the Simian Grid Service URIs (look at `config-includes/SimianGrid.ini` for example URIs), you should be able to start one or more core opensim regions that will register themselves with the grid service.
+
+It should now be possible to login with an opensim-compatible viewer. If you installed Simian Grid Services at `http://www.myserver.com/`, launch your viewer with:
 
 {{{
--loginuri http://www.mygrid.com/login/
+-loginuri http://www.myserver.com/login/
 }}}
 
  (note the trailing slash). You may need to append index.php to the end of the loginuri if your web server is not configured to serve up php files by default.
-
-
-== Troubleshooting ==
-
-Problem: Web server logs report "PHP Fatal error:  Call to undefined function openssl_random_pseudo_bytes()".
-
-Solution: Verify you have PHP >= 5.3 installed.  Verify that the OpenSSL extension is enabled for PHP (e.g. `extension=openssl.so` in php.ini), even if you're not using HTTP over SSL/TLS.
