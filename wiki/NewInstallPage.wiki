@@ -1,8 +1,7 @@
 #summary Installing, configuring, and running the SimianGrid Services
 
 = Installation =
-
-= A word about dependencies =
+== A word about dependencies ==
 Make sure you have the all of the prerequisites installed. These will vary based on Operating System and Operating System version. Only a few linux distributions have seen deployments; they are listed below with the commands to install their dependencies:
 
   _Debian/Ubuntu_:
@@ -33,17 +32,17 @@ Simian Grid Services currently come in a set of three. These are GridFrontend, G
 
 In the course of installation, you will address the following basic concerns to get Simian Grid Services up and running on an apache web server.
 
-# Getting the Simian Grid Services
+ o Getting the Simian Grid Services
 
-# placing the installer in the apache server path
+ o Placing the Installer in the Apache Server Path
 
-# Establishing Database and Database Credentials
+ o Establishing Database and Database Credentials
 
-# Setting Permissions
+ o Setting Permissions
 
-# Running the installer
+ o Running the installer
 
-# Testing/Using Simian Grid Services
+ o Testing/Using Simian Grid Services
 
 
 == Getting the Simian Grid Services ==
@@ -60,13 +59,41 @@ and the source code repository is at:
 git clone http://github.com/openmetaversefoundation/simiangrid.git
 }}}
 
+== Unpacking Simian Grid Services ==
+
+If you are working as a developer (i.e., with a git repository), you will need to enter your repository and make an archive of your branch. Consult the git documentation for how to accomplish this, if you don't already know. The output of this process will produce a file not unlike the distribution, which may be unpacked in the same manner as described subsequently for the end user.
+
+Where you unpack the archive is of critical importance. It must be in a web server's document tree in a path on the tree over which you have administrative control. This can be in your public_html folder or in the server's primary document path, but you must have the ability to create files and allocate permissions. It is of considerable importance that you be able to specify this path accurately in future steps. These instructions will assume you have root access to an apache server that lives in /var/www/ on a linux box, and that you will install into the Document Root (/var/www/htdocs/).
+
+Unpack the archive into /var/www/htdocs/. It will produce a number of files and directories there.
+
+Having successfully unpacked the archive, you are now ready to change the ownership and allocate permissions. If you are installing on windows, you probably wont have to perform this step, but if you do, the key is to give the web server the permissions it needs to write files in the document root. This permission can be revoked once the Simian Grid Services are configured.
+
+Each service uses the same installer code. Installing each is just a matter of opening the correct URL for each service in a browser. But before we do that we must set the permissions. 
 
 
-Place this, or a copy of it, somewhere accessible to your webserver. 
+== Establishing Database and Database Credentials ==
 
-`SimianGrid` contains three projects, `Grid` (!SimianGrid), `GridFrontend` (!SimianGridFrontend), and `GridWebDAV` (SimianGridWebDAV). They have only been tested on apache2 and php5.3.
+Before running the installer, the database environment must be prepared. This is a relatively minor database administration task, and most opensim operators are probably familiar with the operation. If you are not, you should be. I will cover the high points, but will not get too deeply into it - rather, I would refer you to the MySQL documentation at http://dev.mysql.com
 
-== SimianGrid ==
+There are two minimum requirements:
+
+o a MySQL database user
+o a database that user can access
+
+In this minimalist scenario a single database will hold a common tablespace for all of the services we install. However, one might break the tablespace logically into seperate databases, i.e., one each for each of the services; additionally, one could have a user per-service as well.
+
+
+
+
+== Setting Permissions ==
+
+ execute '`chown -R www-data:www-data/var/www/htdocs/*`'
+
+The user and group may differ on your linux distribution, but as noted for windows users, the key is to make the document root writable by the web server. This is so that the installer script can write the operational parameters collected in the interface into your service configurations. Once installation has been completed, standard operating procedures/best practices can be employed to lock down the system as you would any web service environment.
+
+
+= SimianGrid =
 
 
   # Visit Grid/install.php (relative to where you copied the Simian directory previously) and follow through the installation steps. This helper will create config files, load database schemas and fixtures and check for file and directory permissions where required.
