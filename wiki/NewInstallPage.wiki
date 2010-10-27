@@ -23,6 +23,8 @@ You will want to add the following to your MySQL's 'My.cnf'. If the section `[my
 `[mysqld]`
    `max_allowed_packet=16M`
 
+This is needful as the default value of 1MB is too small to load the default assets.
+
 
 = Services Overview =
 
