@@ -1,5 +1,5 @@
 #summary Remove a capability resource.
-#labels Protocol-User
+#labels Protocol-Capability
 
 = Request Format =
 
