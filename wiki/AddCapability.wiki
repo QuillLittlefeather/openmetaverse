@@ -1,5 +1,5 @@
 #summary Create or update a capability resource.
-#labels Protocol-User
+#labels Protocol-Capability
 
 = Request Format =
 
