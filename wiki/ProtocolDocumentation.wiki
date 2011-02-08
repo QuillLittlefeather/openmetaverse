@@ -1,4 +1,4 @@
-#summary Links to !SimianGrid protocol documentation
+#summary Links to SimianGrid protocol documentation
 
 Protocol documentation can be found in the `docs` dir in the !SimianGrid source repo.  Below are links to view HTML versions of those pages.
 
