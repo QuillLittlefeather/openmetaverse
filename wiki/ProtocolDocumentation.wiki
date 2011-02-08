@@ -1,8 +1,6 @@
-= Protocol Documentation =
+#summary Links to !SimianGrid protocol documentation
 
-Protocol documentation can be found in the `docs` dir in the
-SimianGrid source repo.  Below are links to view HTML versions of
-those pages.
+Protocol documentation can be found in the `docs` dir in the !SimianGrid source repo.  Below are links to view HTML versions of those pages.
 
 
 == Assets ==
@@ -70,4 +68,3 @@ those pages.
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveUserCapabilities.rst RemoveUserCapabilities]
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveUserData.rst RemoveUserData]
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/UpdateSession.rst UpdateSession]
-
