@@ -1,5 +1,10 @@
 = Protocol Documentation =
 
+Protocol documentation can be found in the `docs` dir in the
+SimianGrid source repo.  Below are links to view HTML versions of
+those pages.
+
+
 == Assets ==
 
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Asset/AddAsset.rst AddAsset] 
