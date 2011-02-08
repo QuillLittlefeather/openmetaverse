@@ -1,0 +1,32 @@
+= Protocol Documentation =
+
+== Assets ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Asset/AddAsset.rst AddAsset] 
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Asset/GetAsset.rst GetAsset]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Asset/RemoveAsset.rst RemoveAsset]
+
+
+== Capabilities ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Capability/AddCapability.rst AddCapability]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Capability/GetCapability.rst GetCapability]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Capability/RemoveCapability.rst RemoveCapability]
+
+
+== Generic ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Generic/AddGeneric.rst AddGeneric]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Generic/GetGenerics.rst GetGenerics]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Generic/RemoveGeneric.rst RemoveGeneric]
+
+
+== Grid ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/AddMapTile.rst AddMapTile]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/AddScene.rst AddScene]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/GetScene.rst GetScene]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/GetSceneStats.rst GetSceneStats]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/GetScenes.rst GetScenes]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/RemoveScene.rst RemoveScene]
+
