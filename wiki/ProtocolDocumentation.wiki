@@ -30,3 +30,39 @@
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/GetScenes.rst GetScenes]
  * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Grid/RemoveScene.rst RemoveScene]
 
+
+== Inventory ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/AddInventory.rst AddInventory]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/AddInventoryFolder.rst AddInventoryFolder]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/AddInventoryItem.rst AddInventoryItem]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/GetFolderForType.rst GetFolderForType]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/GetInventoryNode.rst GetInventoryNode]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/GetLibrary.rst GetLibrary]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/MoveInventoryNodes.rst MoveInventoryNodes]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/PurgeInventoryFolder.rst PurgeInventoryFolder]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/Inventory/RemoveInventoryNode.rst RemoveInventoryNode]
+
+
+== User ==
+
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/AddIdentity.rst AddIdentity]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/AddSession.rst AddSession]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/AddUser.rst AddUser]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/AddUserData.rst AddUserData]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/AuthorizeIdentity.rst AuthorizeIdentity]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetFriendedBy.rst GetFriendedBy]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetFriends.rst GetFriends]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetIdentities.rst GetIdentities]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetSession.rst GetSession]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetUser.rst GetUser]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetUserStats.rst GetUserStats]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/GetUsers.rst GetUsers]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveIdentity.rst RemoveIdentity]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveSession.rst RemoveSession]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveSessions.rst RemoveSessions]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveUser.rst RemoveUser]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveUserCapabilities.rst RemoveUserCapabilities]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/RemoveUserData.rst RemoveUserData]
+ * [https://github.com/openmetaversefoundation/simiangrid/blob/master/docs/source/User/UpdateSession.rst UpdateSession]
+
